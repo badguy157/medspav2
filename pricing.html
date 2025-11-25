@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View example pricing for our medspa treatments. Botox, fillers, facials, and more. Book a consultation for exact pricing.">
+  <title>Pricing - Fresh Glow MedSpa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">Fresh Glow MedSpa</a>
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span class="nav__toggle-icon"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="treatments.html" class="nav__link">Treatments</a></li>
+        <li><a href="results.html" class="nav__link">Results</a></li>
+        <li><a href="membership.html" class="nav__link">Membership</a></li>
+        <li><a href="pricing.html" class="nav__link nav__link--active">Pricing</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title">Pricing</h1>
+        <p class="hero__subtitle">Clear prices. No surprises. Here are our typical price ranges.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Note -->
+  <section class="section">
+    <div class="container">
+      <div class="pricing-note">
+        <p><strong>📋 Note:</strong> These are example price ranges for demonstration purposes. Your actual cost depends on your goals and treatment plan. We'll give you exact prices in your consultation.</p>
+      </div>
+
+      <!-- Injectables Pricing -->
+      <div class="section__header mt-2xl">
+        <h2>💉 Injectables</h2>
+      </div>
+      <div class="pricing-table">
+        <div class="pricing-row">
+          <span class="pricing-row__service">Botox (per area)</span>
+          <span class="pricing-row__price">from $200</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Botox (full forehead)</span>
+          <span class="pricing-row__price">from $400</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Lip filler</span>
+          <span class="pricing-row__price">from $500</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Cheek filler</span>
+          <span class="pricing-row__price">from $700</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Under-eye filler</span>
+          <span class="pricing-row__price">from $600</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Jawline filler</span>
+          <span class="pricing-row__price">from $800</span>
+        </div>
+      </div>
+
+      <!-- Skin Treatments Pricing -->
+      <div class="section__header mt-2xl">
+        <h2>✨ Skin treatments</h2>
+      </div>
+      <div class="pricing-table">
+        <div class="pricing-row">
+          <span class="pricing-row__service">Hydrating facial</span>
+          <span class="pricing-row__price">from $120</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Deep cleaning facial</span>
+          <span class="pricing-row__price">from $150</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Chemical peel (light)</span>
+          <span class="pricing-row__price">from $150</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Chemical peel (medium)</span>
+          <span class="pricing-row__price">from $250</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Microneedling</span>
+          <span class="pricing-row__price">from $300</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Microneedling with PRP</span>
+          <span class="pricing-row__price">from $500</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Laser skin resurfacing</span>
+          <span class="pricing-row__price">from $800</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">LED light therapy</span>
+          <span class="pricing-row__price">from $75</span>
+        </div>
+      </div>
+
+      <!-- Body Treatments Pricing -->
+      <div class="section__header mt-2xl">
+        <h2>🏃 Body treatments</h2>
+      </div>
+      <div class="pricing-table">
+        <div class="pricing-row">
+          <span class="pricing-row__service">CoolSculpt (per area)</span>
+          <span class="pricing-row__price">from $600</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Body tightening (per area)</span>
+          <span class="pricing-row__price">from $400</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Muscle toning (per session)</span>
+          <span class="pricing-row__price">from $500</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-row__service">Body toning package (4 sessions)</span>
+          <span class="pricing-row__price">from $1,800</span>
+        </div>
+      </div>
+
+      <!-- Packages Note -->
+      <div class="pricing-note mt-2xl">
+        <p><strong>💡 Save with packages:</strong> We offer package deals for multiple sessions. Ask about bundles when you book. <a href="membership.html">Members save even more!</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Affects Price -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="section__header">
+        <h2>What affects your price?</h2>
+        <p class="section__subtitle">Every person is different. Here's what we consider when we quote a price.</p>
+      </div>
+      
+      <div class="card-grid">
+        <div class="card">
+          <div class="card__icon">🎯</div>
+          <h3 class="card__title">Your goals</h3>
+          <p class="card__text">What do you want to achieve? Small tweaks cost less than bigger changes.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">📏</div>
+          <h3 class="card__title">Treatment area</h3>
+          <p class="card__text">Larger areas or multiple areas cost more than a single small area.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🔄</div>
+          <h3 class="card__title">Number of sessions</h3>
+          <p class="card__text">Some treatments need multiple visits. We'll tell you upfront how many.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">🏅</div>
+          <h3 class="card__title">Membership status</h3>
+          <p class="card__text">Members get discounts on all treatments. <a href="membership.html">Learn about membership</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section--primary">
+    <div class="container text-center">
+      <h2>Get exact pricing for you</h2>
+      <p class="section__subtitle">Book a free consultation. We'll look at your goals and give you a clear price. No surprises.</p>
+      <div class="mt-xl">
+        <a href="contact.html" class="btn btn--primary btn--large">Book consultation for exact pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer__title">Fresh Glow MedSpa</h3>
+          <p>Natural results. Real confidence.<br>Look like yourself—just more rested.</p>
+        </div>
+        <div>
+          <h4 class="footer__title">Pages</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contact</h4>
+          <ul class="footer__links">
+            <li>123 Wellness Street</li>
+            <li>Suite 100</li>
+            <li>Glow City, ST 12345</li>
+            <li><a href="tel:555-123-4567">(555) 123-4567</a></li>
+            <li><a href="mailto:hello@freshglow.example">hello@freshglow.example</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Hours</h4>
+          <ul class="footer__links">
+            <li>Monday - Friday: 9am - 6pm</li>
+            <li>Saturday: 10am - 4pm</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Fresh Glow MedSpa. This is a demo site.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('nav__menu--open');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join our medspa membership for regular care, savings, and priority booking. Choose from Glow Plan, Injectable Refresh, or Full Glow packages.">
+  <title>Membership & Packages - Fresh Glow MedSpa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">Fresh Glow MedSpa</a>
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span class="nav__toggle-icon"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="treatments.html" class="nav__link">Treatments</a></li>
+        <li><a href="results.html" class="nav__link">Results</a></li>
+        <li><a href="membership.html" class="nav__link nav__link--active">Membership</a></li>
+        <li><a href="pricing.html" class="nav__link">Pricing</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title">Membership & packages</h1>
+        <p class="hero__subtitle">Regular care means better results. Our plans help you save money and look great all year.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Membership -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2>Why join a membership?</h2>
+        <p class="section__subtitle">When you take care of your skin regularly, you see better results. Membership makes that easier.</p>
+      </div>
+      
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-item__icon">💰</div>
+          <h3 class="trust-item__title">Save money</h3>
+          <p class="trust-item__text">Members get discounts on treatments. You pay less than the regular price.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">📅</div>
+          <h3 class="trust-item__title">Easy scheduling</h3>
+          <p class="trust-item__text">Members book first. You get the times that work best for you.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">🎁</div>
+          <h3 class="trust-item__title">Special perks</h3>
+          <p class="trust-item__text">Free skincare products, birthday treats, and exclusive offers.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-item__icon">📈</div>
+          <h3 class="trust-item__title">Better results</h3>
+          <p class="trust-item__text">Regular treatments work better than one-time visits. Your skin keeps improving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Plans -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="section__header">
+        <h2>Choose your plan</h2>
+        <p class="section__subtitle">Pick the plan that fits your goals. You can change or cancel anytime.</p>
+      </div>
+      
+      <div class="package-grid">
+        <!-- Glow Plan -->
+        <div class="package-card">
+          <h3 class="package-card__title">Glow Plan</h3>
+          <p class="package-card__price">$99–$149 <span>/ month</span></p>
+          <p class="package-card__description">Perfect for skin health and maintenance. Get glowing skin all year.</p>
+          
+          <h4>What's included:</h4>
+          <ul class="package-card__features">
+            <li>One facial every month</li>
+            <li>15% off all skin treatments</li>
+            <li>10% off skincare products</li>
+            <li>Priority booking</li>
+            <li>Free birthday facial</li>
+          </ul>
+          
+          <h4>Best for:</h4>
+          <ul class="card__list">
+            <li>People new to skincare treatments</li>
+            <li>Anyone who wants healthy, glowing skin</li>
+            <li>Those who love regular self-care</li>
+          </ul>
+          
+          <a href="contact.html?plan=glow" class="btn btn--secondary btn--full mt-lg">Talk to us about this plan</a>
+        </div>
+
+        <!-- Injectable Refresh -->
+        <div class="package-card package-card--featured">
+          <span class="package-card__badge">Most Popular</span>
+          <h3 class="package-card__title">Injectable Refresh</h3>
+          <p class="package-card__price">$199–$299 <span>/ month</span></p>
+          <p class="package-card__description">Keep your Botox and fillers looking fresh. Regular touch-ups without the guesswork.</p>
+          
+          <h4>What's included:</h4>
+          <ul class="package-card__features">
+            <li>Botox every 3-4 months (included)</li>
+            <li>15% off all filler treatments</li>
+            <li>Free touch-ups if needed</li>
+            <li>Priority booking</li>
+            <li>Quarterly skin check-in</li>
+          </ul>
+          
+          <h4>Best for:</h4>
+          <ul class="card__list">
+            <li>People who get Botox regularly</li>
+            <li>Anyone who wants to maintain their results</li>
+            <li>Those who like to plan ahead</li>
+          </ul>
+          
+          <a href="contact.html?plan=injectable" class="btn btn--primary btn--full mt-lg">Talk to us about this plan</a>
+        </div>
+
+        <!-- Full Glow -->
+        <div class="package-card">
+          <h3 class="package-card__title">Full Glow</h3>
+          <p class="package-card__price">$349–$449 <span>/ month</span></p>
+          <p class="package-card__description">The complete package. Skin treatments plus injectables. Everything you need to look your best.</p>
+          
+          <h4>What's included:</h4>
+          <ul class="package-card__features">
+            <li>Everything in Glow Plan</li>
+            <li>Everything in Injectable Refresh</li>
+            <li>20% off all other treatments</li>
+            <li>Free skincare products quarterly</li>
+            <li>VIP booking (same-day available)</li>
+            <li>Complimentary LED therapy monthly</li>
+          </ul>
+          
+          <h4>Best for:</h4>
+          <ul class="card__list">
+            <li>People who want the full experience</li>
+            <li>Anyone serious about their skincare</li>
+            <li>Those who want the best value</li>
+          </ul>
+          
+          <a href="contact.html?plan=full-glow" class="btn btn--secondary btn--full mt-lg">Talk to us about this plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ about Membership -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2>Questions about membership</h2>
+      </div>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3 class="faq-item__question">Can I cancel anytime?</h3>
+          <p class="faq-item__answer">Yes. There's no long-term contract. Just let us know 30 days before you want to stop.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3 class="faq-item__question">Can I switch plans?</h3>
+          <p class="faq-item__answer">Yes. You can upgrade or downgrade at any time. We'll help you find the right fit.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3 class="faq-item__question">What if I miss a month?</h3>
+          <p class="faq-item__answer">Your treatments roll over! If you can't come one month, use them the next month.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3 class="faq-item__question">Can I share with a family member?</h3>
+          <p class="faq-item__answer">Memberships are for one person. But ask about our family plans for discounts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section--primary">
+    <div class="container text-center">
+      <h2>Ready to become a member?</h2>
+      <p class="section__subtitle">Let's talk about which plan is right for you. No pressure, just a friendly chat.</p>
+      <div class="mt-xl">
+        <a href="contact.html" class="btn btn--primary btn--large">Talk to us about membership</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer__title">Fresh Glow MedSpa</h3>
+          <p>Natural results. Real confidence.<br>Look like yourself—just more rested.</p>
+        </div>
+        <div>
+          <h4 class="footer__title">Pages</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contact</h4>
+          <ul class="footer__links">
+            <li>123 Wellness Street</li>
+            <li>Suite 100</li>
+            <li>Glow City, ST 12345</li>
+            <li><a href="tel:555-123-4567">(555) 123-4567</a></li>
+            <li><a href="mailto:hello@freshglow.example">hello@freshglow.example</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Hours</h4>
+          <ul class="footer__links">
+            <li>Monday - Friday: 9am - 6pm</li>
+            <li>Saturday: 10am - 4pm</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Fresh Glow MedSpa. This is a demo site.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('nav__menu--open');
+    }
+  </script>
+</body>
+</html>

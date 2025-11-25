@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore our treatments: Botox, fillers, skin peels, microneedling, laser, and body contouring. Natural results, explained simply.">
+  <title>Treatments - Fresh Glow MedSpa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">Fresh Glow MedSpa</a>
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span class="nav__toggle-icon"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="treatments.html" class="nav__link nav__link--active">Treatments</a></li>
+        <li><a href="results.html" class="nav__link">Results</a></li>
+        <li><a href="membership.html" class="nav__link">Membership</a></li>
+        <li><a href="pricing.html" class="nav__link">Pricing</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title">Our treatments</h1>
+        <p class="hero__subtitle">We offer many ways to help you look and feel your best. Each treatment is explained in simple words below.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Injectables Section -->
+  <section class="section" id="injectables">
+    <div class="container">
+      <div class="treatment-category">
+        <h2 class="treatment-category__title">💉 Injectables</h2>
+        <p class="section__subtitle text-left mb-xl">Injectables are products we put under your skin with a tiny needle. They smooth wrinkles or add volume.</p>
+        
+        <div class="card-grid">
+          <div class="card">
+            <div class="card__icon">💉</div>
+            <h3 class="card__title">Botox</h3>
+            <p class="card__text">Botox is a medicine that relaxes muscles. When muscles relax, wrinkles smooth out. It works on lines in your forehead and around your eyes.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>You have lines on your forehead when you frown</li>
+              <li>You want to prevent wrinkles from getting deeper</li>
+              <li>You want a quick treatment with no downtime</li>
+            </ul>
+            <a href="contact.html?treatment=botox" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">💋</div>
+            <h3 class="card__title">Lip filler</h3>
+            <p class="card__text">Lip filler is a gel we inject into your lips. It adds volume and shape. Your lips look fuller and more balanced.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>Your lips feel too thin</li>
+              <li>You want more definition in your lip shape</li>
+              <li>You lost lip volume as you got older</li>
+            </ul>
+            <a href="contact.html?treatment=lip-filler" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">😊</div>
+            <h3 class="card__title">Cheek filler</h3>
+            <p class="card__text">Cheek filler lifts and adds volume to your cheeks. It brings back the youthful curve you may have lost over time.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>Your face looks flat or tired</li>
+              <li>You want to restore volume in your cheeks</li>
+              <li>You want a more lifted look without surgery</li>
+            </ul>
+            <a href="contact.html?treatment=cheek-filler" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">👃</div>
+            <h3 class="card__title">Under-eye filler</h3>
+            <p class="card__text">We fill in the hollow area under your eyes. This makes dark circles less visible. You look more rested.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>You have dark hollows under your eyes</li>
+              <li>People always ask if you're tired</li>
+              <li>You want to look more awake</li>
+            </ul>
+            <a href="contact.html?treatment=under-eye-filler" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skin Section -->
+  <section class="section section--light" id="skin">
+    <div class="container">
+      <div class="treatment-category">
+        <h2 class="treatment-category__title">✨ Skin treatments</h2>
+        <p class="section__subtitle text-left mb-xl">These treatments improve your skin's texture, tone, and glow. They work on the surface or just below it.</p>
+        
+        <div class="card-grid">
+          <div class="card">
+            <div class="card__icon">🧴</div>
+            <h3 class="card__title">Chemical peel</h3>
+            <p class="card__text">A chemical peel removes the top layer of old skin. New, fresh skin grows back. Your face looks smoother and brighter.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>You have sun damage or dark spots</li>
+              <li>Your skin looks dull or uneven</li>
+              <li>You want smoother, younger-looking skin</li>
+            </ul>
+            <a href="contact.html?treatment=chemical-peel" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">🌟</div>
+            <h3 class="card__title">Microneedling</h3>
+            <p class="card__text">Tiny needles make small holes in your skin. Your body heals these holes and makes new collagen. Collagen makes skin firm and smooth.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>You have acne scars or large pores</li>
+              <li>Your skin is losing firmness</li>
+              <li>You want to improve skin texture</li>
+            </ul>
+            <a href="contact.html?treatment=microneedling" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">🔬</div>
+            <h3 class="card__title">Laser skin resurfacing</h3>
+            <p class="card__text">A laser removes damaged skin layer by layer. New skin grows back tighter and smoother. Great for wrinkles and sun damage.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>You have deeper wrinkles or lines</li>
+              <li>You have sun damage or age spots</li>
+              <li>You want more dramatic results</li>
+            </ul>
+            <a href="contact.html?treatment=laser-resurfacing" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">💆</div>
+            <h3 class="card__title">Hydrating facial</h3>
+            <p class="card__text">A deep cleaning and moisturizing treatment. We remove dirt, add serums, and hydrate your skin. You leave with a healthy glow.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>Your skin feels dry or tired</li>
+              <li>You want a relaxing skin treatment</li>
+              <li>You want your skin to glow for an event</li>
+            </ul>
+            <a href="contact.html?treatment=facial" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">💡</div>
+            <h3 class="card__title">LED light therapy</h3>
+            <p class="card__text">Special lights help your skin heal and make more collagen. Different colors treat different problems. It's painless and relaxing.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>You have acne or redness</li>
+              <li>You want to boost other treatments</li>
+              <li>You want an easy, no-downtime option</li>
+            </ul>
+            <a href="contact.html?treatment=led-therapy" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body Section -->
+  <section class="section" id="body">
+    <div class="container">
+      <div class="treatment-category">
+        <h2 class="treatment-category__title">🏃 Body treatments</h2>
+        <p class="section__subtitle text-left mb-xl">These treatments help shape your body without surgery. They reduce fat or tighten skin.</p>
+        
+        <div class="card-grid">
+          <div class="card">
+            <div class="card__icon">❄️</div>
+            <h3 class="card__title">CoolSculpt (Fat freezing)</h3>
+            <p class="card__text">We freeze fat cells in areas like your belly or thighs. The frozen cells die and your body removes them over time. No needles, no surgery.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>You have stubborn fat that won't go away with diet</li>
+              <li>You want results without surgery</li>
+              <li>You can wait 2-3 months for full results</li>
+            </ul>
+            <a href="contact.html?treatment=fat-freezing" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">📻</div>
+            <h3 class="card__title">Radiofrequency body tightening</h3>
+            <p class="card__text">Heat energy tightens loose skin on your body. It boosts collagen so skin stays firmer over time.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>You have loose skin after weight loss</li>
+              <li>You want to tighten skin on arms, belly, or thighs</li>
+              <li>You want gradual, natural-looking results</li>
+            </ul>
+            <a href="contact.html?treatment=body-tightening" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">💪</div>
+            <h3 class="card__title">Muscle toning</h3>
+            <p class="card__text">A machine makes your muscles contract thousands of times. It's like doing thousands of sit-ups in one session. Builds muscle and reduces fat.</p>
+            <h4>Good for you if:</h4>
+            <ul class="card__list">
+              <li>You want a more toned look</li>
+              <li>You already exercise but want more definition</li>
+              <li>You want to target specific areas</li>
+            </ul>
+            <a href="contact.html?treatment=muscle-toning" class="btn btn--primary btn--full">Book consultation about this treatment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section--primary">
+    <div class="container text-center">
+      <h2>Not sure which treatment is right for you?</h2>
+      <p class="section__subtitle">Book a consultation. We'll listen to your goals and help you choose the best option.</p>
+      <div class="mt-xl">
+        <a href="contact.html" class="btn btn--primary btn--large">Book your consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer__title">Fresh Glow MedSpa</h3>
+          <p>Natural results. Real confidence.<br>Look like yourself—just more rested.</p>
+        </div>
+        <div>
+          <h4 class="footer__title">Pages</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contact</h4>
+          <ul class="footer__links">
+            <li>123 Wellness Street</li>
+            <li>Suite 100</li>
+            <li>Glow City, ST 12345</li>
+            <li><a href="tel:555-123-4567">(555) 123-4567</a></li>
+            <li><a href="mailto:hello@freshglow.example">hello@freshglow.example</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Hours</h4>
+          <ul class="footer__links">
+            <li>Monday - Friday: 9am - 6pm</li>
+            <li>Saturday: 10am - 4pm</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Fresh Glow MedSpa. This is a demo site.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('nav__menu--open');
+    }
+  </script>
+</body>
+</html>

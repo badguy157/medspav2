@@ -978,6 +978,13 @@ p {
 }
 
 /* --------------------------------------------------------------------------
+   Mobile Sticky CTA Bar
+   -------------------------------------------------------------------------- */
+.sticky-cta {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
    Responsive Adjustments
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
@@ -1005,5 +1012,40 @@ p {
     flex-direction: column;
     text-align: center;
     gap: var(--spacing-sm);
+  }
+
+  /* Mobile Sticky CTA Bar */
+  .sticky-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-text);
+    padding: var(--spacing-md) var(--spacing-lg);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 99;
+  }
+
+  .sticky-cta .btn--full {
+    width: 100%;
+  }
+
+  .sticky-cta__phone {
+    color: var(--color-gray);
+    font-size: var(--font-size-sm);
+    text-decoration: underline;
+  }
+
+  .sticky-cta__phone:hover {
+    color: var(--color-white);
+  }
+
+  /* Add padding to prevent sticky CTA from covering content */
+  body {
+    padding-bottom: 100px;
   }
 }

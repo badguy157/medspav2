@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="See real results from our medspa treatments. Before and after photos and client testimonials.">
+  <title>Results - Fresh Glow MedSpa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">Fresh Glow MedSpa</a>
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span class="nav__toggle-icon"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="treatments.html" class="nav__link">Treatments</a></li>
+        <li><a href="results.html" class="nav__link nav__link--active">Results</a></li>
+        <li><a href="membership.html" class="nav__link">Membership</a></li>
+        <li><a href="pricing.html" class="nav__link">Pricing</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <h1 class="hero__title">Real results</h1>
+        <p class="hero__subtitle">See what our treatments can do. These are real people who wanted natural results—and got them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before/After Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2>Before and after</h2>
+        <p class="section__subtitle">Every face is different. But the goal is always the same: you, just fresher.</p>
+      </div>
+      
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-card__images">
+            <div class="result-card__image result-card__image--before">
+              <span class="result-card__label">Before</span>
+              <div style="font-size: 3rem; color: #999;">👤</div>
+            </div>
+            <div class="result-card__image">
+              <span class="result-card__label">After</span>
+              <div style="font-size: 3rem; color: #4a7c59;">👤</div>
+            </div>
+          </div>
+          <p class="result-card__caption">"Smoother forehead lines, still natural."</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-card__images">
+            <div class="result-card__image result-card__image--before">
+              <span class="result-card__label">Before</span>
+              <div style="font-size: 3rem; color: #999;">👤</div>
+            </div>
+            <div class="result-card__image">
+              <span class="result-card__label">After</span>
+              <div style="font-size: 3rem; color: #4a7c59;">👤</div>
+            </div>
+          </div>
+          <p class="result-card__caption">"Fuller lips, but still looks like me."</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-card__images">
+            <div class="result-card__image result-card__image--before">
+              <span class="result-card__label">Before</span>
+              <div style="font-size: 3rem; color: #999;">👤</div>
+            </div>
+            <div class="result-card__image">
+              <span class="result-card__label">After</span>
+              <div style="font-size: 3rem; color: #4a7c59;">👤</div>
+            </div>
+          </div>
+          <p class="result-card__caption">"No more tired look. I actually feel awake now."</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-card__images">
+            <div class="result-card__image result-card__image--before">
+              <span class="result-card__label">Before</span>
+              <div style="font-size: 3rem; color: #999;">👤</div>
+            </div>
+            <div class="result-card__image">
+              <span class="result-card__label">After</span>
+              <div style="font-size: 3rem; color: #4a7c59;">👤</div>
+            </div>
+          </div>
+          <p class="result-card__caption">"Brighter, more even skin tone."</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-card__images">
+            <div class="result-card__image result-card__image--before">
+              <span class="result-card__label">Before</span>
+              <div style="font-size: 3rem; color: #999;">👤</div>
+            </div>
+            <div class="result-card__image">
+              <span class="result-card__label">After</span>
+              <div style="font-size: 3rem; color: #4a7c59;">👤</div>
+            </div>
+          </div>
+          <p class="result-card__caption">"Lifted cheeks without looking 'done'."</p>
+        </div>
+
+        <div class="result-card">
+          <div class="result-card__images">
+            <div class="result-card__image result-card__image--before">
+              <span class="result-card__label">Before</span>
+              <div style="font-size: 3rem; color: #999;">👤</div>
+            </div>
+            <div class="result-card__image">
+              <span class="result-card__label">After</span>
+              <div style="font-size: 3rem; color: #4a7c59;">👤</div>
+            </div>
+          </div>
+          <p class="result-card__caption">"Smaller pores, smoother texture."</p>
+        </div>
+      </div>
+
+      <p class="text-center mt-2xl" style="color: var(--color-text-light); font-style: italic;">
+        Note: Results vary from person to person. These are example results for demonstration purposes.
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="section__header">
+        <h2>What our clients say</h2>
+        <p class="section__subtitle">Real words from real people who visited us.</p>
+      </div>
+      
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p class="testimonial__quote">"I was nervous at first. I've never done anything like this before. But the team made me feel so comfortable. Now I actually like how I look in photos again."</p>
+          <p class="testimonial__author">— Sarah M.</p>
+        </div>
+
+        <div class="testimonial">
+          <p class="testimonial__quote">"I just wanted to look less tired. That's it. And they did exactly that. My coworkers asked if I went on vacation. I didn't tell them my secret!"</p>
+          <p class="testimonial__author">— Jennifer K.</p>
+        </div>
+
+        <div class="testimonial">
+          <p class="testimonial__quote">"I was worried I'd look fake. But they listened to what I wanted. The results are subtle but I feel so much more confident."</p>
+          <p class="testimonial__author">— Michelle T.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="testimonial-grid">
+        <div class="testimonial">
+          <p class="testimonial__quote">"The best part? No one knows I had anything done. I just look... better. Like I've been sleeping well and drinking water."</p>
+          <p class="testimonial__author">— David R.</p>
+        </div>
+
+        <div class="testimonial">
+          <p class="testimonial__quote">"I've tried other places before. Fresh Glow is different. They actually care about natural results, not just selling more treatments."</p>
+          <p class="testimonial__author">— Lisa P.</p>
+        </div>
+
+        <div class="testimonial">
+          <p class="testimonial__quote">"As a guy, I wasn't sure if this was 'for me.' But they were totally cool about it. Now I get compliments on looking refreshed."</p>
+          <p class="testimonial__author">— Michael B.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section section--primary">
+    <div class="container text-center">
+      <h2>Want results like these?</h2>
+      <p class="section__subtitle">Book a consultation. We'll help you reach your goals.</p>
+      <div class="mt-xl">
+        <a href="contact.html" class="btn btn--primary btn--large">Book your consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer__title">Fresh Glow MedSpa</h3>
+          <p>Natural results. Real confidence.<br>Look like yourself—just more rested.</p>
+        </div>
+        <div>
+          <h4 class="footer__title">Pages</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contact</h4>
+          <ul class="footer__links">
+            <li>123 Wellness Street</li>
+            <li>Suite 100</li>
+            <li>Glow City, ST 12345</li>
+            <li><a href="tel:555-123-4567">(555) 123-4567</a></li>
+            <li><a href="mailto:hello@freshglow.example">hello@freshglow.example</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Hours</h4>
+          <ul class="footer__links">
+            <li>Monday - Friday: 9am - 6pm</li>
+            <li>Saturday: 10am - 4pm</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Fresh Glow MedSpa. This is a demo site.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('nav__menu--open');
+    }
+  </script>
+</body>
+</html>

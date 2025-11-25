@@ -1044,8 +1044,8 @@ p {
     color: var(--color-white);
   }
 
-  /* Add padding to prevent sticky CTA from covering content */
-  body {
+  /* Add padding to prevent sticky CTA from covering content - only on pages with sticky CTA */
+  body.has-sticky-cta {
     padding-bottom: 100px;
   }
 }

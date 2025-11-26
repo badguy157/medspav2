@@ -34,12 +34,19 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <div class="hero__content">
-        <h1 class="hero__title">Look fresher, not fake.</h1>
-        <p class="hero__subtitle">We help you look like yourself, just more rested. Natural results. No surprises. Real confidence.</p>
-        <div class="btn-group" style="justify-content: center;">
-          <a href="contact.html" class="btn btn--primary btn--large">Book consultation</a>
-          <a href="treatments.html" class="btn btn--secondary btn--large">See treatments</a>
+      <div class="hero__layout">
+        <div class="hero__content">
+          <h1 class="hero__title">Look fresher, not fake.</h1>
+          <p class="hero__subtitle">We help you look like yourself, just more rested. Natural results. No surprises. Real confidence.</p>
+          <div class="btn-group">
+            <a href="contact.html" class="btn btn--primary btn--large">Book consultation</a>
+            <a href="treatments.html" class="btn btn--secondary btn--large">See treatments</a>
+          </div>
+        </div>
+        <div class="hero__image-frame">
+          <div class="hero__image-placeholder">
+            <span>Premium facial treatment</span>
+          </div>
         </div>
       </div>
     </div>
@@ -84,42 +91,43 @@
         <h2>Popular treatments</h2>
         <p class="section__subtitle">These are the treatments our clients love most.</p>
       </div>
-      <div class="card-grid">
-        <div class="card">
+      <div class="card-grid card-grid--3-col">
+        <div class="card card--treatment card--featured">
+          <span class="card__badge">Most requested</span>
           <div class="card__icon">💉</div>
           <h3 class="card__title">Botox</h3>
           <p class="card__text">A quick treatment that relaxes muscles. It smooths lines on your forehead and around your eyes.</p>
-          <a href="treatments.html#injectables" class="btn btn--secondary">Learn more</a>
+          <a href="treatments.html#injectables" class="btn--text">Learn more</a>
         </div>
-        <div class="card">
+        <div class="card card--treatment">
           <div class="card__icon">💋</div>
           <h3 class="card__title">Lip filler</h3>
           <p class="card__text">Adds a little volume to your lips. Makes them look fuller and more balanced.</p>
-          <a href="treatments.html#injectables" class="btn btn--secondary">Learn more</a>
+          <a href="treatments.html#injectables" class="btn--text">Learn more</a>
         </div>
-        <div class="card">
+        <div class="card card--treatment">
           <div class="card__icon">🔬</div>
           <h3 class="card__title">Skin resurfacing</h3>
           <p class="card__text">Removes the top layer of skin. New, fresh skin grows back. Great for wrinkles and sun damage.</p>
-          <a href="treatments.html#skin" class="btn btn--secondary">Learn more</a>
+          <a href="treatments.html#skin" class="btn--text">Learn more</a>
         </div>
-        <div class="card">
+        <div class="card card--treatment">
           <div class="card__icon">🧴</div>
           <h3 class="card__title">Facials</h3>
           <p class="card__text">Deep cleaning and hydration for your face. You leave with glowing, happy skin.</p>
-          <a href="treatments.html#skin" class="btn btn--secondary">Learn more</a>
+          <a href="treatments.html#skin" class="btn--text">Learn more</a>
         </div>
-        <div class="card">
+        <div class="card card--treatment">
           <div class="card__icon">❄️</div>
           <h3 class="card__title">Body contouring</h3>
           <p class="card__text">Reduces stubborn fat in areas like your belly or thighs. No surgery needed.</p>
-          <a href="treatments.html#body" class="btn btn--secondary">Learn more</a>
+          <a href="treatments.html#body" class="btn--text">Learn more</a>
         </div>
-        <div class="card">
+        <div class="card card--treatment">
           <div class="card__icon">🌟</div>
           <h3 class="card__title">Microneedling</h3>
           <p class="card__text">Tiny needles create small holes in your skin. Your body heals them and makes new collagen.</p>
-          <a href="treatments.html#skin" class="btn btn--secondary">Learn more</a>
+          <a href="treatments.html#skin" class="btn--text">Learn more</a>
         </div>
       </div>
     </div>
@@ -167,18 +175,24 @@
       <div class="steps">
         <div class="step">
           <div class="step__number">1</div>
-          <h3 class="step__title">Book</h3>
-          <p class="step__text">Pick a time that works for you. Fill out a simple form. We'll confirm your visit.</p>
+          <div class="step__content">
+            <h3 class="step__title">Book</h3>
+            <p class="step__text">Pick a time that works for you. Fill out a simple form. We'll confirm your visit.</p>
+          </div>
         </div>
         <div class="step">
           <div class="step__number">2</div>
-          <h3 class="step__title">Visit</h3>
-          <p class="step__text">Come meet us. We'll talk about your goals. Then we'll make a plan together.</p>
+          <div class="step__content">
+            <h3 class="step__title">Visit</h3>
+            <p class="step__text">Come meet us. We'll talk about your goals. Then we'll make a plan together.</p>
+          </div>
         </div>
         <div class="step">
           <div class="step__number">3</div>
-          <h3 class="step__title">Follow-up</h3>
-          <p class="step__text">We check in after your treatment. We want to make sure you love your results.</p>
+          <div class="step__content">
+            <h3 class="step__title">Follow-up</h3>
+            <p class="step__text">We check in after your treatment. We want to make sure you love your results.</p>
+          </div>
         </div>
       </div>
       <div class="text-center mt-2xl">

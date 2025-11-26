@@ -17,6 +17,11 @@
   --color-primary-dark: #5f8373;   /* Darker sage for hover states */
   --color-primary-light: #f0f5f2;  /* Very light sage background */
   --color-primary-muted: rgba(122, 158, 142, 0.12); /* Low opacity accent for icon backgrounds */
+  --color-primary-shadow: rgba(122, 158, 142, 0.25); /* Shadow color for primary buttons */
+  --color-primary-shadow-hover: rgba(122, 158, 142, 0.35); /* Stronger shadow on hover */
+  --color-primary-connector: rgba(122, 158, 142, 0.3); /* Connector line for stepper */
+  --color-primary-gradient-start: rgba(122, 158, 142, 0.06); /* Subtle gradient start */
+  --color-primary-gradient-end: rgba(122, 158, 142, 0.02); /* Subtle gradient end */
   
   /* Secondary Colors */
   --color-secondary: #b8a394;      /* Warm taupe - understated luxury */
@@ -345,7 +350,7 @@ p {
   background-color: var(--color-primary);
   color: var(--color-white);
   border-color: var(--color-primary);
-  box-shadow: 0 4px 14px rgba(122, 158, 142, 0.25);
+  box-shadow: 0 4px 14px var(--color-primary-shadow);
 }
 
 .btn--primary:hover {
@@ -353,7 +358,7 @@ p {
   border-color: var(--color-primary-dark);
   color: var(--color-white);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(122, 158, 142, 0.35);
+  box-shadow: 0 6px 20px var(--color-primary-shadow-hover);
   text-decoration: none;
 }
 
@@ -428,7 +433,7 @@ p {
   left: 0;
   right: 0;
   height: 60%;
-  background: linear-gradient(135deg, rgba(122, 158, 142, 0.06) 0%, rgba(122, 158, 142, 0.02) 100%);
+  background: linear-gradient(135deg, var(--color-primary-gradient-start) 0%, var(--color-primary-gradient-end) 100%);
   pointer-events: none;
 }
 
@@ -698,7 +703,7 @@ p {
   transform: translateX(-50%);
   width: 60%;
   height: 2px;
-  background-color: rgba(122, 158, 142, 0.3);
+  background-color: var(--color-primary-connector);
   z-index: 0;
 }
 
@@ -722,7 +727,7 @@ p {
   font-size: var(--font-size-2xl);
   font-weight: 600;
   margin-bottom: var(--spacing-lg);
-  box-shadow: 0 4px 14px rgba(122, 158, 142, 0.35);
+  box-shadow: 0 4px 14px var(--color-primary-shadow-hover);
 }
 
 .step__title {

@@ -78,10 +78,10 @@
   --radius-pill: 9999px;
   
   /* Shadows - Softer, more premium */
-  --shadow-sm: 0 1px 3px rgba(45, 41, 38, 0.04);
-  --shadow-md: 0 4px 12px rgba(45, 41, 38, 0.06);
-  --shadow-lg: 0 12px 32px rgba(45, 41, 38, 0.08);
-  --shadow-hover: 0 16px 40px rgba(45, 41, 38, 0.1);
+  --shadow-sm: 0 1px 3px rgba(42, 38, 34, 0.04);
+  --shadow-md: 0 4px 12px rgba(42, 38, 34, 0.06);
+  --shadow-lg: 0 12px 32px rgba(42, 38, 34, 0.08);
+  --shadow-hover: 0 16px 40px rgba(42, 38, 34, 0.1);
   
   /* Transitions */
   --transition-fast: 180ms ease;
@@ -157,7 +157,7 @@ h1 {
 h2 {
   font-size: var(--font-size-3xl);
   margin-bottom: var(--spacing-lg);
-  letter-spacing: -0.01em; /* Slightly larger with subtle letter spacing */
+  letter-spacing: -0.01em; /* Subtle letter spacing for premium feel */
 }
 
 h3 {
@@ -229,7 +229,7 @@ p {
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(45, 41, 38, 0.05);
+  border-bottom: 1px solid rgba(42, 38, 34, 0.05);
 }
 
 .nav__container {
@@ -845,22 +845,6 @@ p {
   box-shadow: 0 6px 20px var(--color-primary-shadow-hover);
   border: 3px solid var(--color-white);
   position: relative;
-}
-
-.step__number::after {
-  content: attr(data-icon);
-  position: absolute;
-  bottom: -8px;
-  right: -8px;
-  width: 28px;
-  height: 28px;
-  background-color: var(--color-white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  box-shadow: 0 2px 8px rgba(42, 38, 34, 0.1);
 }
 
 .step__title {

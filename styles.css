@@ -41,6 +41,7 @@
   
   /* Accent */
   --color-accent: #f7f5f1;         /* Soft warm cream */
+  --color-star: #d4a373;           /* Warm gold for ratings */
   
   /* Spacing - More generous for premium feel */
   --spacing-xs: 0.25rem;
@@ -519,7 +520,7 @@ p {
 }
 
 .hero__stars {
-  color: #d4a373;
+  color: var(--color-star);
   letter-spacing: 2px;
 }
 
@@ -579,7 +580,7 @@ p {
 }
 
 .hero__card-rating-stars {
-  color: #d4a373;
+  color: var(--color-star);
   letter-spacing: 2px;
   font-size: var(--font-size-sm);
 }

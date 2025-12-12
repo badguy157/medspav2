@@ -552,25 +552,41 @@ p {
 
 .hero__image-container {
   flex: 1;
-  background: rgba(232, 240, 237, 0.4);
-  border-radius: var(--radius-lg);
+  background: rgba(232, 240, 237, 0.4); /* emerald-50/40 equivalent */
+  border-radius: var(--radius-xl); /* rounded-3xl */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-lg) var(--spacing-md);
+  padding: 1.5rem 1rem; /* py-6 px-4 */
   position: relative;
+  overflow: visible;
+}
+
+.hero__image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 24rem; /* max-w-sm */
+  aspect-ratio: 4/5;
   overflow: hidden;
+  border-radius: var(--radius-xl); /* rounded-3xl */
+  box-shadow: 0 1px 2px rgba(42, 38, 34, 0.05); /* shadow-sm */
 }
 
 .hero__image {
-  position: relative;
-  height: 16rem; /* 256px / h-64 */
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 20rem; /* 320px / max-w-xs */
-  border-radius: var(--radius-lg);
-  box-shadow: 0 1px 2px rgba(42, 38, 34, 0.05);
+  height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+/* Medium screens and up - increase padding */
+@media (min-width: 768px) {
+  .hero__image-container {
+    padding: 2rem 1.5rem; /* md:py-8 md:px-6 */
+  }
 }
 
 .hero__card-rating {

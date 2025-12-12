@@ -573,13 +573,6 @@ p {
   object-position: center;
 }
 
-.hero__image-placeholder::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 30% 40%, rgba(74, 107, 92, 0.08) 0%, transparent 60%);
-}
-
 .hero__card-rating {
   margin-top: var(--spacing-md);
   text-align: center;

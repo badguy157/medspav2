@@ -434,21 +434,14 @@ p {
    Hero Section - Two-column premium layout
    -------------------------------------------------------------------------- */
 .hero {
-  background: linear-gradient(180deg, var(--color-sage-light) 0%, var(--color-off-white) 100%);
+  background: linear-gradient(180deg, 
+    rgba(16, 185, 129, 0.08) 0%,    /* soft emerald tint at 8% opacity */
+    rgba(16, 185, 129, 0.04) 50%,   /* lighter emerald tint at 4% opacity */
+    var(--color-white) 100%);
   padding: var(--spacing-section) 0;
   position: relative;
   overflow: hidden;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
-  background: linear-gradient(135deg, var(--color-primary-gradient-start) 0%, var(--color-primary-gradient-end) 100%);
-  pointer-events: none;
+  border-bottom: 1px solid rgba(42, 38, 34, 0.05);
 }
 
 .hero__layout {
@@ -590,6 +583,10 @@ p {
 }
 
 @media (max-width: 900px) {
+  .hero {
+    padding: var(--spacing-section-mobile) 0;
+  }
+  
   .hero__layout {
     grid-template-columns: 1fr;
     text-align: center;

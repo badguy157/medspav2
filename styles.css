@@ -435,8 +435,8 @@ p {
    -------------------------------------------------------------------------- */
 .hero {
   background: linear-gradient(180deg, 
-    rgba(16, 185, 129, 0.08) 0%,    /* emerald-50 with 80% opacity equivalent */
-    rgba(16, 185, 129, 0.04) 50%,   /* emerald-50 with 40% opacity equivalent */
+    rgba(16, 185, 129, 0.08) 0%,    /* soft emerald tint at 8% opacity */
+    rgba(16, 185, 129, 0.04) 50%,   /* lighter emerald tint at 4% opacity */
     var(--color-white) 100%);
   padding: var(--spacing-section) 0;
   position: relative;

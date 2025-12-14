@@ -251,6 +251,24 @@
       const menu = document.getElementById('nav-menu');
       menu.classList.toggle('nav__menu--open');
     }
+
+    // Sticky CTA scroll visibility (mobile only)
+    (function() {
+      const stickyCta = document.querySelector('.sticky-cta');
+      if (!stickyCta) return;
+
+      function handleScroll() {
+        // Show after user scrolls down a bit (260px)
+        const shouldShow = window.scrollY > 260;
+        stickyCta.classList.toggle('visible', shouldShow);
+      }
+
+      // Initialize on page load
+      handleScroll();
+
+      // Listen to scroll events with passive flag for better performance
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    })();
   </script>
 </body>
 </html>

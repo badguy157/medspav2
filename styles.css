@@ -1574,6 +1574,16 @@ p {
     box-shadow: 0 -4px 20px rgba(42, 38, 34, 0.08);
     z-index: 99;
     border-top: 1px solid rgba(42, 38, 34, 0.06);
+    transition: opacity 200ms ease, transform 200ms ease;
+    opacity: 0;
+    transform: translateY(1rem);
+    pointer-events: none;
+  }
+
+  .sticky-cta.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .sticky-cta .btn--full {

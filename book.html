@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a consultation at Fresh Glow MedSpa. Choose your treatment, pick a time, and schedule your visit.">
+  <title>Book Consultation - Fresh Glow MedSpa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Demo Banner -->
+  <div class="demo-banner">
+    Demo only. Example design for illustration, not a real clinic. Built by <a href="https://www.keyturn.studio/" target="_blank" rel="noopener">Keyturn Studio</a>.
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">Fresh Glow MedSpa</a>
+      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+        <span class="nav__toggle-icon"></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="treatments.html" class="nav__link">Treatments</a></li>
+        <li><a href="results.html" class="nav__link">Results</a></li>
+        <li><a href="membership.html" class="nav__link">Membership</a></li>
+        <li><a href="pricing.html" class="nav__link">Pricing</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h1 class="hero__title">Book your consultation</h1>
+        <p class="hero__subtitle">Three simple steps to schedule your visit. We'll confirm within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section class="section">
+    <div class="container">
+      <div class="booking-wrapper">
+        <!-- Progress Steps -->
+        <div class="booking-progress">
+          <div class="booking-step booking-step--active" data-step="1">
+            <div class="booking-step__number">1</div>
+            <div class="booking-step__label">Treatment</div>
+          </div>
+          <div class="booking-step" data-step="2">
+            <div class="booking-step__number">2</div>
+            <div class="booking-step__label">Date & Time</div>
+          </div>
+          <div class="booking-step" data-step="3">
+            <div class="booking-step__number">3</div>
+            <div class="booking-step__label">Your Info</div>
+          </div>
+        </div>
+
+        <!-- Step 1: Choose Treatment -->
+        <div class="booking-content booking-content--active" data-content="1">
+          <h2 class="booking-content__title">What are you interested in?</h2>
+          <p class="booking-content__subtitle">Select a treatment to get started. Not sure? Choose "General consultation."</p>
+          
+          <div class="treatment-options">
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="botox" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">💉</div>
+                <div class="treatment-option__name">Botox</div>
+                <div class="treatment-option__time">15–30 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="lip-filler" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">💋</div>
+                <div class="treatment-option__name">Lip Filler</div>
+                <div class="treatment-option__time">30–45 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="skin-resurfacing" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">🔬</div>
+                <div class="treatment-option__name">Skin Resurfacing</div>
+                <div class="treatment-option__time">45–60 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="facials" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">🧴</div>
+                <div class="treatment-option__name">Facials</div>
+                <div class="treatment-option__time">60–90 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="body-contouring" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">❄️</div>
+                <div class="treatment-option__name">Body Contouring</div>
+                <div class="treatment-option__time">30–60 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="microneedling" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">🌟</div>
+                <div class="treatment-option__name">Microneedling</div>
+                <div class="treatment-option__time">30–45 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="consultation" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">💬</div>
+                <div class="treatment-option__name">General Consultation</div>
+                <div class="treatment-option__time">20–30 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="other" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">✨</div>
+                <div class="treatment-option__name">Something Else</div>
+                <div class="treatment-option__time">Let's discuss</div>
+              </div>
+            </label>
+          </div>
+          
+          <div class="booking-actions">
+            <button class="btn btn--primary btn--large" onclick="goToStep(2)">Continue</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Choose Date & Time -->
+        <div class="booking-content" data-content="2">
+          <h2 class="booking-content__title">When works best for you?</h2>
+          <p class="booking-content__subtitle">Pick a preferred day and time. We'll do our best to accommodate.</p>
+          
+          <div class="datetime-picker">
+            <div class="form-group">
+              <label class="form-label">Preferred Day</label>
+              <div class="day-options">
+                <label class="day-option">
+                  <input type="radio" name="day" value="monday" class="day-option__input">
+                  <div class="day-option__card">Monday</div>
+                </label>
+                <label class="day-option">
+                  <input type="radio" name="day" value="tuesday" class="day-option__input">
+                  <div class="day-option__card">Tuesday</div>
+                </label>
+                <label class="day-option">
+                  <input type="radio" name="day" value="wednesday" class="day-option__input">
+                  <div class="day-option__card">Wednesday</div>
+                </label>
+                <label class="day-option">
+                  <input type="radio" name="day" value="thursday" class="day-option__input">
+                  <div class="day-option__card">Thursday</div>
+                </label>
+                <label class="day-option">
+                  <input type="radio" name="day" value="friday" class="day-option__input">
+                  <div class="day-option__card">Friday</div>
+                </label>
+                <label class="day-option">
+                  <input type="radio" name="day" value="saturday" class="day-option__input">
+                  <div class="day-option__card">Saturday</div>
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label">Preferred Time</label>
+              <div class="time-options">
+                <label class="time-option">
+                  <input type="radio" name="time" value="morning" class="time-option__input">
+                  <div class="time-option__card">
+                    <div class="time-option__label">Morning</div>
+                    <div class="time-option__range">9am – 12pm</div>
+                  </div>
+                </label>
+                <label class="time-option">
+                  <input type="radio" name="time" value="afternoon" class="time-option__input">
+                  <div class="time-option__card">
+                    <div class="time-option__label">Afternoon</div>
+                    <div class="time-option__range">12pm – 3pm</div>
+                  </div>
+                </label>
+                <label class="time-option">
+                  <input type="radio" name="time" value="evening" class="time-option__input">
+                  <div class="time-option__card">
+                    <div class="time-option__label">Evening</div>
+                    <div class="time-option__range">3pm – 6pm</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="booking-actions">
+            <button class="btn btn--secondary btn--large" onclick="goToStep(1)">Back</button>
+            <button class="btn btn--primary btn--large" onclick="goToStep(3)">Continue</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Contact Info -->
+        <div class="booking-content" data-content="3">
+          <h2 class="booking-content__title">How can we reach you?</h2>
+          <p class="booking-content__subtitle">We'll use this info to confirm your appointment.</p>
+          
+          <form class="booking-form" onsubmit="submitBooking(event)">
+            <div class="form-group">
+              <label class="form-label" for="name">Full Name *</label>
+              <input type="text" id="name" name="name" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="email">Email *</label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="notes">Additional Notes (Optional)</label>
+              <textarea id="notes" name="notes" class="form-textarea" rows="4" placeholder="Anything we should know? Questions or concerns?"></textarea>
+            </div>
+            
+            <div class="booking-actions">
+              <button type="button" class="btn btn--secondary btn--large" onclick="goToStep(2)">Back</button>
+              <button type="submit" class="btn btn--primary btn--large">Request Appointment</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Confirmation State -->
+        <div class="booking-content booking-confirmation" data-content="confirmation">
+          <div class="confirmation-icon">✓</div>
+          <h2 class="booking-content__title">Request received!</h2>
+          <p class="booking-content__subtitle">Thank you for your interest. We'll review your request and confirm your appointment within 24 hours.</p>
+          
+          <div class="confirmation-details">
+            <h3>What's next?</h3>
+            <ul class="confirmation-steps">
+              <li>We'll call or email you to confirm your time slot</li>
+              <li>If you have questions before then, feel free to call us at (555) 123-4567</li>
+              <li>We'll send you prep instructions 24 hours before your visit</li>
+            </ul>
+          </div>
+          
+          <div class="booking-actions">
+            <a href="index.html" class="btn btn--primary btn--large">Back to Home</a>
+            <a href="treatments.html" class="btn btn--secondary btn--large">Browse Treatments</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer__title">Fresh Glow MedSpa</h3>
+          <p>Natural results. Real confidence.<br>Look like yourself, just more rested.</p>
+        </div>
+        <div>
+          <h4 class="footer__title">Pages</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Contact</h4>
+          <ul class="footer__links">
+            <li>123 Wellness Street</li>
+            <li>Suite 100</li>
+            <li>Glow City, ST 12345</li>
+            <li><a href="tel:555-123-4567">(555) 123-4567</a></li>
+            <li><a href="mailto:hello@freshglow.example">hello@freshglow.example</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__title">Hours</h4>
+          <ul class="footer__links">
+            <li>Monday - Friday: 9am - 6pm</li>
+            <li>Saturday: 10am - 4pm</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Fresh Glow MedSpa. This is a demo site.</p>
+      </div>
+      <div class="demo-note">
+        <p>This is a demonstration website for a fictional clinic. All information is for illustrative purposes only.</p>
+        <p><a href="https://www.keyturn.studio/proof.html#clinic-demos">Back to all Keyturn clinic demos &rarr;</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation toggle
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('nav__menu--open');
+    }
+
+    // Booking flow state
+    let currentStep = 1;
+    const bookingData = {
+      treatment: '',
+      day: '',
+      time: '',
+      name: '',
+      email: '',
+      phone: '',
+      notes: ''
+    };
+
+    // Check URL for treatment parameter
+    window.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const treatment = urlParams.get('treatment');
+      if (treatment) {
+        const treatmentInput = document.querySelector(`input[name="treatment"][value="${treatment}"]`);
+        if (treatmentInput) {
+          treatmentInput.checked = true;
+          bookingData.treatment = treatment;
+        }
+      }
+    });
+
+    function goToStep(step) {
+      // Validate current step before proceeding
+      if (step > currentStep) {
+        if (currentStep === 1 && !validateStep1()) return;
+        if (currentStep === 2 && !validateStep2()) return;
+      }
+
+      // Update current step
+      currentStep = step;
+
+      // Update progress indicators
+      document.querySelectorAll('.booking-step').forEach((el, index) => {
+        if (index + 1 <= step) {
+          el.classList.add('booking-step--active');
+        } else {
+          el.classList.remove('booking-step--active');
+        }
+        if (index + 1 === step) {
+          el.classList.add('booking-step--current');
+        } else {
+          el.classList.remove('booking-step--current');
+        }
+      });
+
+      // Show/hide content
+      document.querySelectorAll('.booking-content').forEach(el => {
+        el.classList.remove('booking-content--active');
+      });
+      document.querySelector(`.booking-content[data-content="${step}"]`).classList.add('booking-content--active');
+
+      // Scroll to top of booking section
+      document.querySelector('.booking-wrapper').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function validateStep1() {
+      const selected = document.querySelector('input[name="treatment"]:checked');
+      if (!selected) {
+        alert('Please select a treatment to continue.');
+        return false;
+      }
+      bookingData.treatment = selected.value;
+      return true;
+    }
+
+    function validateStep2() {
+      const day = document.querySelector('input[name="day"]:checked');
+      const time = document.querySelector('input[name="time"]:checked');
+      if (!day || !time) {
+        alert('Please select both a day and time to continue.');
+        return false;
+      }
+      bookingData.day = day.value;
+      bookingData.time = time.value;
+      return true;
+    }
+
+    function submitBooking(event) {
+      event.preventDefault();
+      
+      // Collect form data
+      bookingData.name = document.getElementById('name').value;
+      bookingData.email = document.getElementById('email').value;
+      bookingData.phone = document.getElementById('phone').value;
+      bookingData.notes = document.getElementById('notes').value;
+
+      // In a real app, this would send to a server
+      console.log('Booking submitted:', bookingData);
+
+      // Show confirmation
+      document.querySelectorAll('.booking-content').forEach(el => {
+        el.classList.remove('booking-content--active');
+      });
+      document.querySelector('.booking-content[data-content="confirmation"]').classList.add('booking-content--active');
+
+      // Hide progress steps
+      document.querySelector('.booking-progress').style.display = 'none';
+
+      // Scroll to top
+      document.querySelector('.booking-wrapper').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

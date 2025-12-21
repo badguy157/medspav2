@@ -1899,6 +1899,63 @@ p {
   font-size: 0.875rem;
 }
 
+.result-card__details {
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+}
+
+.result-detail {
+  padding: 0.25rem 0;
+  line-height: 1.4;
+}
+
+.result-detail strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Results Filters */
+.results-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin: var(--spacing-xl) 0 var(--spacing-2xl);
+}
+
+.filter-btn {
+  padding: 0.625rem 1.5rem;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  font-family: var(--font-sans);
+}
+
+.filter-btn:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+.filter-btn:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.filter-btn--active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.filter-btn--active:hover {
+  background-color: var(--color-primary-dark);
+}
+
 /* --------------------------------------------------------------------------
    Testimonials
    -------------------------------------------------------------------------- */

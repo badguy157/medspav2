@@ -785,6 +785,18 @@ p {
 /* --------------------------------------------------------------------------
    Injector/Provider Card
    -------------------------------------------------------------------------- */
+.section__badge {
+  display: inline-block;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 600;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--spacing-md);
+  border: 1px solid rgba(74, 107, 92, 0.15);
+}
+
 .injector-card {
   max-width: 900px;
   margin: 0 auto;
@@ -833,6 +845,16 @@ p {
   color: var(--color-primary);
   font-weight: 500;
   margin-bottom: var(--spacing-lg);
+}
+
+.injector-card__disclaimer {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-md);
 }
 
 .injector-card__bio {
@@ -895,6 +917,112 @@ p {
   
   .injector-card__credentials li {
     justify-content: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Social Proof Section - Reviews and Testimonials
+   -------------------------------------------------------------------------- */
+.social-proof-section {
+  background-color: var(--color-sage-light);
+  padding: var(--spacing-3xl) 0;
+  border-top: 1px solid rgba(74, 107, 92, 0.1);
+  border-bottom: 1px solid rgba(74, 107, 92, 0.1);
+}
+
+.social-proof-rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.social-proof-rating__stars {
+  color: var(--color-star);
+  font-size: var(--font-size-2xl);
+  letter-spacing: 2px;
+}
+
+.social-proof-rating__score {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.social-proof-rating__sample {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+.social-proof-rating__count {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.social-proof-disclaimer {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-md);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-proof-testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.social-proof-testimonial {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(42, 38, 34, 0.04);
+}
+
+.social-proof-testimonial__quote {
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-md);
+}
+
+.social-proof-testimonial__author {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.social-proof-testimonial__treatment {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+.social-proof-cta {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .social-proof-testimonials {
+    grid-template-columns: 1fr;
+  }
+  
+  .social-proof-rating {
+    flex-direction: column;
+    gap: var(--spacing-sm);
   }
 }
 

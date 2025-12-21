@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Muscle toning - build and define muscles and prevent lines with quick, no-downtime injections. Natural results in 3-7 days.">
-  <title>Muscle Toning - Fresh Glow MedSpa</title>
+  <meta name="description" content="CoolSculpt fat freezing treatment - eliminate stubborn fat without surgery. Permanent results in 8-12 weeks.">
+  <title>CoolSculpt (Fat Freezing) - Fresh Glow MedSpa</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="has-sticky-cta">
@@ -31,17 +31,14 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main data-treatment="muscle-toning">
-  
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="hero__content">
-        <h1 class="hero__title" id="treatmentTitle">Muscle Toning</h1>
-        <p class="hero__subtitle" id="treatmentTagline">Build muscle and burn fat—effortlessly.</p>
+        <h1 class="hero__title">CoolSculpt (Fat Freezing)</h1>
+        <p class="hero__subtitle">Freeze away stubborn fat—no surgery, no needles.</p>
         <div class="mt-xl">
-          <a href="book.html?treatment=muscle-toning" class="btn btn--primary btn--large">Request a consultation</a>
+          <a href="book.html?treatment=fat-freezing" class="btn btn--primary btn--large">Request a consultation</a>
         </div>
       </div>
     </div>
@@ -52,28 +49,28 @@
     <div class="container">
       <div class="section__header">
         <h2>Who it's for</h2>
-        <p class="section__subtitle">Muscle toning might be a good fit if you:</p>
+        <p class="section__subtitle">CoolSculpt might be a good fit if you:</p>
       </div>
-      <div class="trust-grid" id="whoForGrid">
+      <div class="trust-grid">
         <div class="trust-item">
-          <div class="trust-item__icon">😊</div>
-          <h3 class="trust-item__title">Forehead lines</h3>
-          <p class="trust-item__text">Have lines on your forehead when you frown or raise your eyebrows</p>
+          <div class="trust-item__icon">🎯</div>
+          <h3 class="trust-item__title">Stubborn fat</h3>
+          <p class="trust-item__text">Have pockets of fat that won't go away with diet and exercise</p>
         </div>
         <div class="trust-item">
-          <div class="trust-item__icon">👁️</div>
-          <h3 class="trust-item__title">Crow's feet</h3>
-          <p class="trust-item__text">Notice wrinkles around your eyes when you smile</p>
+          <div class="trust-item__icon">💪</div>
+          <h3 class="trust-item__title">Active lifestyle</h3>
+          <p class="trust-item__text">Already maintain a healthy weight but want to target specific areas</p>
         </div>
         <div class="trust-item">
-          <div class="trust-item__icon">🛡️</div>
-          <h3 class="trust-item__title">Prevent aging</h3>
-          <p class="trust-item__text">Want to prevent wrinkles from getting deeper over time</p>
+          <div class="trust-item__icon">🚫</div>
+          <h3 class="trust-item__title">No surgery</h3>
+          <p class="trust-item__text">Want results without going under the knife or taking time off work</p>
         </div>
         <div class="trust-item">
-          <div class="trust-item__icon">⚡</div>
-          <h3 class="trust-item__title">Quick results</h3>
-          <p class="trust-item__text">Need a fast treatment with no downtime or recovery</p>
+          <div class="trust-item__icon">⏰</div>
+          <h3 class="trust-item__title">Patient mindset</h3>
+          <p class="trust-item__text">Can wait 2-3 months to see full results develop naturally</p>
         </div>
       </div>
     </div>
@@ -84,35 +81,42 @@
     <div class="container">
       <div class="section__header">
         <h2>The process</h2>
-        <p class="section__subtitle">What happens during your muscle toning session</p>
+        <p class="section__subtitle">What happens during your CoolSculpt appointment</p>
       </div>
-      <div class="steps" id="processSteps">
+      <div class="steps">
         <div class="step">
           <div class="step__number">1</div>
           <div class="step__content">
-            <h3 class="step__title">Consultation</h3>
-            <p class="step__text">We discuss your goals and examine the areas you want to treat. We'll create a customized plan just for you.</p>
+            <h3 class="step__title">Consultation & marking</h3>
+            <p class="step__text">We identify the treatment areas and mark them. We'll discuss your goals and create a treatment plan.</p>
           </div>
         </div>
         <div class="step">
           <div class="step__number">2</div>
           <div class="step__content">
-            <h3 class="step__title">Preparation</h3>
-            <p class="step__text">We clean the treatment area and may apply a numbing cream if needed (though most people don't need it).</p>
+            <h3 class="step__title">Gel pad application</h3>
+            <p class="step__text">We apply a protective gel pad to your skin to protect it from the cold.</p>
           </div>
         </div>
         <div class="step">
           <div class="step__number">3</div>
           <div class="step__content">
-            <h3 class="step__title">Injection</h3>
-            <p class="step__text">Using a tiny needle, we inject small amounts of Botox into specific muscles. This takes about 10-15 minutes.</p>
+            <h3 class="step__title">Applicator placement</h3>
+            <p class="step__text">The CoolSculpt applicator is positioned on the treatment area. You'll feel a gentle vacuum suction and intense cold for the first few minutes.</p>
           </div>
         </div>
         <div class="step">
           <div class="step__number">4</div>
           <div class="step__content">
-            <h3 class="step__title">Aftercare</h3>
-            <p class="step__text">You can resume normal activities immediately. We'll give you simple aftercare instructions to follow.</p>
+            <h3 class="step__title">Freezing cycle</h3>
+            <p class="step__text">The area goes numb after about 10 minutes. You can read, work on your phone, or relax during the 35-60 minute cycle.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step__number">5</div>
+          <div class="step__content">
+            <h3 class="step__title">Massage & recovery</h3>
+            <p class="step__text">After the applicator is removed, we massage the area to break up frozen fat cells. You can resume normal activities immediately.</p>
           </div>
         </div>
       </div>
@@ -124,24 +128,28 @@
     <div class="container">
       <div class="section__header">
         <h2>Timeline & results</h2>
-        <p class="section__subtitle">What to expect after your muscle toning treatment</p>
+        <p class="section__subtitle">What to expect after your CoolSculpt treatment</p>
       </div>
-      <div class="faq-list" id="timelineList">
+      <div class="faq-list">
         <div class="faq-item">
           <h3 class="faq-item__question">Day 1: Right after treatment</h3>
-          <p class="faq-item__answer">You may see tiny bumps where we injected, but they fade within an hour. You can return to work and normal activities immediately. Avoid lying down for 4 hours and don't exercise heavily for 24 hours.</p>
+          <p class="faq-item__answer">The treated area may be red, swollen, or numb. This is normal. You can return to work and exercise immediately—there's no downtime.</p>
         </div>
         <div class="faq-item">
-          <h3 class="faq-item__question">Days 3-7: Results begin</h3>
-          <p class="faq-item__answer">You'll start to notice your wrinkles smoothing out. The full effect develops gradually over this week.</p>
+          <h3 class="faq-item__question">Week 1-2: Initial changes</h3>
+          <p class="faq-item__answer">Swelling subsides and numbness fades. You might not see visible changes yet—your body is just starting to process the frozen fat cells.</p>
         </div>
         <div class="faq-item">
-          <h3 class="faq-item__question">Week 2: Full results</h3>
-          <p class="faq-item__answer">Your results are now complete. You'll see smoother skin and a more refreshed appearance.</p>
+          <h3 class="faq-item__question">Weeks 3-6: Changes begin</h3>
+          <p class="faq-item__answer">You'll start to notice the treated area looking slimmer. Your body is actively eliminating dead fat cells through your lymphatic system.</p>
         </div>
         <div class="faq-item">
-          <h3 class="faq-item__question">Months 3-4: Maintenance</h3>
-          <p class="faq-item__answer">Results typically last 3-4 months. Book your next appointment when you notice lines starting to return.</p>
+          <h3 class="faq-item__question">Weeks 8-12: Full results</h3>
+          <p class="faq-item__answer">Maximum results appear around 2-3 months. The treated area will be noticeably slimmer with a more contoured appearance.</p>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-item__question">Long-term: Permanent results</h3>
+          <p class="faq-item__answer">The fat cells are gone permanently. If you maintain your weight, results last indefinitely. Some people do additional sessions for more reduction.</p>
         </div>
       </div>
     </div>
@@ -153,26 +161,26 @@
       <div class="section__header">
         <h2>Frequently asked questions</h2>
       </div>
-      <div class="faq-list" id="faqList">
+      <div class="faq-list">
         <div class="faq-item">
-          <h3 class="faq-item__question">Does Botox hurt?</h3>
-          <p class="faq-item__answer">Most people describe it as a tiny pinch. The needle is very small and the injections are quick. If you're nervous, we can apply a numbing cream first.</p>
+          <h3 class="faq-item__question">Does CoolSculpt hurt?</h3>
+          <p class="faq-item__answer">You'll feel intense cold and pulling for the first 5-10 minutes, then the area goes numb. Most people read, work, or nap during treatment. There's no pain, just minor discomfort initially.</p>
         </div>
         <div class="faq-item">
-          <h3 class="faq-item__question">Will I look frozen or fake?</h3>
-          <p class="faq-item__answer">Not when done correctly. Our goal is natural results—you'll still be able to make expressions, just with fewer wrinkles. We use conservative doses to avoid an overdone look.</p>
+          <h3 class="faq-item__question">Is this a weight loss treatment?</h3>
+          <p class="faq-item__answer">No, CoolSculpt is for body contouring, not weight loss. It's best for people at or near their goal weight who have stubborn pockets of fat in specific areas.</p>
         </div>
         <div class="faq-item">
-          <h3 class="faq-item__question">How long does Botox last?</h3>
-          <p class="faq-item__answer">Results typically last 3-4 months. First-time patients sometimes see results fade a bit sooner, around 2-3 months. With regular treatments, results may last longer.</p>
+          <h3 class="faq-item__question">What areas can be treated?</h3>
+          <p class="faq-item__answer">Common areas include the abdomen, love handles, thighs, under the chin (double chin), back fat, and upper arms. We'll assess your specific areas during consultation.</p>
         </div>
         <div class="faq-item">
-          <h3 class="faq-item__question">Can I combine Botox with other treatments?</h3>
-          <p class="faq-item__answer">Yes! Botox works well with fillers, facials, and other skin treatments. We can create a comprehensive plan during your consultation.</p>
+          <h3 class="faq-item__question">How many treatments do I need?</h3>
+          <p class="faq-item__answer">Many people see good results with one treatment per area. Some opt for a second treatment for more reduction. We'll recommend a plan during your consultation.</p>
         </div>
         <div class="faq-item">
-          <h3 class="faq-item__question">What's the difference between Botox and fillers?</h3>
-          <p class="faq-item__answer">Botox relaxes muscles to smooth wrinkles caused by expressions (like frown lines). Fillers add volume to areas that have lost fullness (like lips or cheeks). Many people benefit from both.</p>
+          <h3 class="faq-item__question">Will the fat come back?</h3>
+          <p class="faq-item__answer">The frozen fat cells are eliminated permanently. However, if you gain weight, remaining fat cells can expand. Maintain a stable weight for lasting results.</p>
         </div>
       </div>
     </div>
@@ -185,10 +193,10 @@
         <h2>What our clients say</h2>
       </div>
       <div style="max-width: 700px; margin: 0 auto;">
-        <div class="social-proof-testimonial" id="testimonialBlock">
-          <p class="social-proof-testimonial__quote">"I was nervous about looking 'done,' but my results are so natural. My forehead is smooth but I can still make expressions. I just look like I got a good night's sleep!"</p>
-          <p class="social-proof-testimonial__author">Sarah M.</p>
-          <p class="social-proof-testimonial__treatment">Muscle toning (Sample testimonial)</p>
+        <div class="social-proof-testimonial">
+          <p class="social-proof-testimonial__quote">"I was skeptical at first, but wow! After 10 weeks, my love handles are practically gone. I can finally wear fitted shirts without feeling self-conscious. No surgery, no downtime—just results."</p>
+          <p class="social-proof-testimonial__author">Michael R.</p>
+          <p class="social-proof-testimonial__treatment">CoolSculpt treatment (Sample testimonial)</p>
         </div>
       </div>
     </div>
@@ -196,17 +204,14 @@
 
   <!-- Bottom CTA Section -->
   <section class="section section--primary">
-    <div class="container text-center" id="bottomCta">
-      <h2>Ready for a more toned, defined body?</h2>
-      <p class="section__subtitle">Book your muscle toning consultation today and see visible muscle definition.</p>
+    <div class="container text-center">
+      <h2>Ready to freeze away stubborn fat?</h2>
+      <p class="section__subtitle">Book your CoolSculpt consultation and take the first step toward a more contoured you.</p>
       <div class="mt-xl">
-        <a href="book.html?treatment=muscle-toning" class="btn btn--primary btn--large">Request a consultation</a>
+        <a href="book.html?treatment=fat-freezing" class="btn btn--primary btn--large">Request a consultation</a>
       </div>
     </div>
   </section>
-
-  </main>
-  <!-- End Main Content -->
 
   <!-- Footer -->
   <footer class="footer">
@@ -258,7 +263,7 @@
 
   <!-- Mobile Sticky CTA Bar -->
   <div class="sticky-cta">
-    <a href="book.html?treatment=muscle-toning" class="btn btn--primary btn--full">Request a consultation</a>
+    <a href="book.html?treatment=fat-freezing" class="btn btn--primary btn--full">Request a consultation</a>
     <a href="tel:555-123-4567" class="sticky-cta__phone">Call the medspa</a>
   </div>
 
@@ -286,9 +291,5 @@
       window.addEventListener('scroll', handleScroll, { passive: true });
     })();
   </script>
-
-  <!-- Treatment Detail Scripts -->
-  <script src="treatment-detail-data.js"></script>
-  <script src="treatment-detail.js"></script>
 </body>
 </html>

@@ -31,12 +31,15 @@
     </div>
   </nav>
 
+  <!-- Main Content -->
+  <main data-treatment="microneedling">
+  
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="hero__content">
-        <h1 class="hero__title">Microneedling</h1>
-        <p class="hero__subtitle">Build collagen and transform your skin texture—naturally.</p>
+        <h1 class="hero__title" id="treatmentTitle">Microneedling</h1>
+        <p class="hero__subtitle" id="treatmentTagline">Build collagen and transform your skin texture—naturally.</p>
         <div class="mt-xl">
           <a href="book.html?treatment=microneedling" class="btn btn--primary btn--large">Request a consultation</a>
         </div>
@@ -51,7 +54,7 @@
         <h2>Who it's for</h2>
         <p class="section__subtitle">Microneedling might be a good fit if you:</p>
       </div>
-      <div class="trust-grid">
+      <div class="trust-grid" id="whoForGrid">
         <div class="trust-item">
           <div class="trust-item__icon">💫</div>
           <h3 class="trust-item__title">Acne scars</h3>
@@ -83,7 +86,7 @@
         <h2>The process</h2>
         <p class="section__subtitle">What happens during your microneedling appointment</p>
       </div>
-      <div class="steps">
+      <div class="steps" id="processSteps">
         <div class="step">
           <div class="step__number">1</div>
           <div class="step__content">
@@ -130,7 +133,7 @@
         <h2>Timeline & results</h2>
         <p class="section__subtitle">What to expect after your microneedling treatment</p>
       </div>
-      <div class="faq-list">
+      <div class="faq-list" id="timelineList">
         <div class="faq-item">
           <h3 class="faq-item__question">Days 1-3: Initial healing</h3>
           <p class="faq-item__answer">Your skin will be red and may feel tight, similar to a sunburn. Avoid makeup for 24 hours and use only gentle, approved products.</p>
@@ -161,7 +164,7 @@
       <div class="section__header">
         <h2>Frequently asked questions</h2>
       </div>
-      <div class="faq-list">
+      <div class="faq-list" id="faqList">
         <div class="faq-item">
           <h3 class="faq-item__question">Does microneedling hurt?</h3>
           <p class="faq-item__answer">We apply numbing cream beforehand, so most people feel only mild pressure or tingling. The sensation is tolerable and the results are worth it.</p>
@@ -193,7 +196,7 @@
         <h2>What our clients say</h2>
       </div>
       <div style="max-width: 700px; margin: 0 auto;">
-        <div class="social-proof-testimonial">
+        <div class="social-proof-testimonial" id="testimonialBlock">
           <p class="social-proof-testimonial__quote">"After three sessions, my acne scars have faded so much! My skin texture is smoother and my pores look smaller. People keep asking what I'm doing differently."</p>
           <p class="social-proof-testimonial__author">Jessica L.</p>
           <p class="social-proof-testimonial__treatment">Microneedling treatment (Sample testimonial)</p>
@@ -204,7 +207,7 @@
 
   <!-- Bottom CTA Section -->
   <section class="section section--primary">
-    <div class="container text-center">
+    <div class="container text-center" id="bottomCta">
       <h2>Ready for smoother, firmer skin?</h2>
       <p class="section__subtitle">Book your microneedling consultation and start your journey to better skin texture.</p>
       <div class="mt-xl">
@@ -212,6 +215,9 @@
       </div>
     </div>
   </section>
+
+  </main>
+  <!-- End Main Content -->
 
   <!-- Footer -->
   <footer class="footer">
@@ -291,5 +297,9 @@
       window.addEventListener('scroll', handleScroll, { passive: true });
     })();
   </script>
+
+  <!-- Treatment Detail Scripts -->
+  <script src="treatment-detail-data.js"></script>
+  <script src="treatment-detail.js"></script>
 </body>
 </html>

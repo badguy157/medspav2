@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Muscle toning - build and define muscles and prevent lines with quick, no-downtime injections. Natural results in 3-7 days.">
-  <title>Muscle Toning - Fresh Glow MedSpa</title>
+  <meta name="description" content="Hydrating facial - deep moisture and relaxation and prevent lines with quick, no-downtime injections. Natural results in 3-7 days.">
+  <title>Hydrating Facial - Fresh Glow MedSpa</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="has-sticky-cta">
@@ -31,17 +31,14 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main data-treatment="muscle-toning">
-  
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="hero__content">
-        <h1 class="hero__title" id="treatmentTitle">Muscle Toning</h1>
-        <p class="hero__subtitle" id="treatmentTagline">Build muscle and burn fat—effortlessly.</p>
+        <h1 class="hero__title">Hydrating Facial</h1>
+        <p class="hero__subtitle">Hydrate, relax, and glow—instantly.</p>
         <div class="mt-xl">
-          <a href="book.html?treatment=muscle-toning" class="btn btn--primary btn--large">Request a consultation</a>
+          <a href="book.html?treatment=facial" class="btn btn--primary btn--large">Request a consultation</a>
         </div>
       </div>
     </div>
@@ -52,9 +49,9 @@
     <div class="container">
       <div class="section__header">
         <h2>Who it's for</h2>
-        <p class="section__subtitle">Muscle toning might be a good fit if you:</p>
+        <p class="section__subtitle">Hydrating facial might be a good fit if you:</p>
       </div>
-      <div class="trust-grid" id="whoForGrid">
+      <div class="trust-grid">
         <div class="trust-item">
           <div class="trust-item__icon">😊</div>
           <h3 class="trust-item__title">Forehead lines</h3>
@@ -84,9 +81,9 @@
     <div class="container">
       <div class="section__header">
         <h2>The process</h2>
-        <p class="section__subtitle">What happens during your muscle toning session</p>
+        <p class="section__subtitle">What happens during your hydrating facial appointment</p>
       </div>
-      <div class="steps" id="processSteps">
+      <div class="steps">
         <div class="step">
           <div class="step__number">1</div>
           <div class="step__content">
@@ -124,9 +121,9 @@
     <div class="container">
       <div class="section__header">
         <h2>Timeline & results</h2>
-        <p class="section__subtitle">What to expect after your muscle toning treatment</p>
+        <p class="section__subtitle">What to expect after your hydrating facial</p>
       </div>
-      <div class="faq-list" id="timelineList">
+      <div class="faq-list">
         <div class="faq-item">
           <h3 class="faq-item__question">Day 1: Right after treatment</h3>
           <p class="faq-item__answer">You may see tiny bumps where we injected, but they fade within an hour. You can return to work and normal activities immediately. Avoid lying down for 4 hours and don't exercise heavily for 24 hours.</p>
@@ -153,7 +150,7 @@
       <div class="section__header">
         <h2>Frequently asked questions</h2>
       </div>
-      <div class="faq-list" id="faqList">
+      <div class="faq-list">
         <div class="faq-item">
           <h3 class="faq-item__question">Does Botox hurt?</h3>
           <p class="faq-item__answer">Most people describe it as a tiny pinch. The needle is very small and the injections are quick. If you're nervous, we can apply a numbing cream first.</p>
@@ -185,10 +182,10 @@
         <h2>What our clients say</h2>
       </div>
       <div style="max-width: 700px; margin: 0 auto;">
-        <div class="social-proof-testimonial" id="testimonialBlock">
+        <div class="social-proof-testimonial">
           <p class="social-proof-testimonial__quote">"I was nervous about looking 'done,' but my results are so natural. My forehead is smooth but I can still make expressions. I just look like I got a good night's sleep!"</p>
           <p class="social-proof-testimonial__author">Sarah M.</p>
-          <p class="social-proof-testimonial__treatment">Muscle toning (Sample testimonial)</p>
+          <p class="social-proof-testimonial__treatment">Hydrating facial (Sample testimonial)</p>
         </div>
       </div>
     </div>
@@ -196,17 +193,14 @@
 
   <!-- Bottom CTA Section -->
   <section class="section section--primary">
-    <div class="container text-center" id="bottomCta">
-      <h2>Ready for a more toned, defined body?</h2>
-      <p class="section__subtitle">Book your muscle toning consultation today and see visible muscle definition.</p>
+    <div class="container text-center">
+      <h2>Ready for deeply hydrated, glowing skin?</h2>
+      <p class="section__subtitle">Book your hydrating facial today and see immediate glow and hydration.</p>
       <div class="mt-xl">
-        <a href="book.html?treatment=muscle-toning" class="btn btn--primary btn--large">Request a consultation</a>
+        <a href="book.html?treatment=facial" class="btn btn--primary btn--large">Request a consultation</a>
       </div>
     </div>
   </section>
-
-  </main>
-  <!-- End Main Content -->
 
   <!-- Footer -->
   <footer class="footer">
@@ -258,7 +252,7 @@
 
   <!-- Mobile Sticky CTA Bar -->
   <div class="sticky-cta">
-    <a href="book.html?treatment=muscle-toning" class="btn btn--primary btn--full">Request a consultation</a>
+    <a href="book.html?treatment=facial" class="btn btn--primary btn--full">Request a consultation</a>
     <a href="tel:555-123-4567" class="sticky-cta__phone">Call the medspa</a>
   </div>
 
@@ -286,9 +280,5 @@
       window.addEventListener('scroll', handleScroll, { passive: true });
     })();
   </script>
-
-  <!-- Treatment Detail Scripts -->
-  <script src="treatment-detail-data.js"></script>
-  <script src="treatment-detail.js"></script>
 </body>
 </html>

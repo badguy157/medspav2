@@ -7,7 +7,7 @@
   <title>Request Consultation - Fresh Glow MedSpa</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="booking-page">
   <!-- Demo Banner -->
   <div class="demo-banner">
     Demo only. Example design for illustration, not a real clinic. Built by <a href="https://www.keyturn.studio/" target="_blank" rel="noopener">Keyturn Studio</a>.
@@ -615,18 +615,23 @@
     // Update appointment summary in step 3
     function updateAppointmentSummary() {
       // Update treatment name
-      const treatmentName = treatmentMeta[bookingData.treatment]?.name || bookingData.treatment;
+      const treatmentName = treatmentMeta[bookingData.treatment]?.name || bookingData.treatment || 'Not selected';
       document.getElementById('summary-treatment-name').textContent = treatmentName;
       
-      // Update date/time
-      const dayLabel = bookingData.day.charAt(0).toUpperCase() + bookingData.day.slice(1);
+      // Update date/time with safety checks
+      const dayLabel = bookingData.day ? (bookingData.day.charAt(0).toUpperCase() + bookingData.day.slice(1)) : '';
       const timeMap = {
         'morning': 'Morning (9am – 12pm)',
         'afternoon': 'Afternoon (12pm – 3pm)',
         'evening': 'Evening (3pm – 6pm)'
       };
-      const timeLabel = timeMap[bookingData.time] || bookingData.time;
-      document.getElementById('summary-datetime').textContent = `${dayLabel}, ${timeLabel}`;
+      const timeLabel = bookingData.time ? (timeMap[bookingData.time] || bookingData.time) : '';
+      
+      if (dayLabel && timeLabel) {
+        document.getElementById('summary-datetime').textContent = `${dayLabel}, ${timeLabel}`;
+      } else {
+        document.getElementById('summary-datetime').textContent = 'Not selected';
+      }
     }
 
     function validateStep1() {

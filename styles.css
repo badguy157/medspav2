@@ -2831,13 +2831,13 @@ p {
    Book.html Specific Hero Adjustments
    ======================================== */
 
-/* Reduce hero padding on book.html only - target by body or section context */
-body:has(.booking-wrapper) .hero {
+/* Reduce hero padding on book.html only - using class-based approach for better browser support */
+body.booking-page .hero {
   padding: 2rem 0 1.5rem 0;
 }
 
 @media (max-width: 768px) {
-  body:has(.booking-wrapper) .hero {
+  body.booking-page .hero {
     padding: 1.5rem 0 1rem 0;
   }
 }

@@ -2309,4 +2309,403 @@ p {
   body.has-sticky-cta {
     padding-bottom: 100px;
   }
+
+/* ========================================
+   Reassurance Block Styles
+   ======================================== */
+
+.reassurance-block {
+  background: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border: 1px solid rgba(42, 38, 34, 0.08);
+}
+
+.reassurance-block__title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.reassurance-block__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reassurance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.reassurance-item__icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+.reassurance-item__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.reassurance-item__text strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.reassurance-item__text a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.reassurance-item__text a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .reassurance-block {
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+  }
+  
+  .reassurance-block__title {
+    font-size: var(--font-size-base);
+  }
+  
+  .reassurance-item {
+    gap: 0.625rem;
+  }
+  
+  .reassurance-item__icon {
+    font-size: 1.125rem;
+  }
+  
+  .reassurance-item__text {
+    font-size: 0.875rem;
+  }
+}
+
+/* ========================================
+   Confirmation Card Styles
+   ======================================== */
+
+.confirmation-card {
+  background: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+  text-align: center;
+  border: 2px solid var(--color-primary);
+  animation: fadeInScale 0.4s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.confirmation-card__icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.confirmation-card__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 0.75rem 0;
+}
+
+.confirmation-card__subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-text-light);
+  margin: 0 0 2rem 0;
+}
+
+.confirmation-card__steps {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.confirmation-card__steps-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
+
+.confirmation-step {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.confirmation-step:last-child {
+  margin-bottom: 0;
+}
+
+.confirmation-step__number {
+  background: var(--color-primary);
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+  font-size: var(--font-size-sm);
+}
+
+.confirmation-step__content {
+  flex: 1;
+}
+
+.confirmation-step__title {
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.25rem 0;
+  font-size: var(--font-size-base);
+}
+
+.confirmation-step__description {
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.confirmation-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.confirmation-card__actions .btn {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .confirmation-card__actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .confirmation-card__actions .btn {
+    width: auto;
+    flex: 0 1 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .confirmation-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .confirmation-card__icon {
+    font-size: 3rem;
+  }
+  
+  .confirmation-card__title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .confirmation-card__steps {
+    padding: 1.5rem;
+  }
+}
+
+/* ========================================
+   Treatment Selection Summary
+   ======================================== */
+
+.treatment-summary {
+  background: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.treatment-summary__content {
+  flex: 1;
+}
+
+.treatment-summary__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  margin: 0 0 0.25rem 0;
+}
+
+.treatment-summary__value {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.treatment-summary__icon {
+  font-size: 1.5rem;
+}
+
+.treatment-summary__change {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.treatment-summary__change:hover {
+  background: rgba(161, 103, 58, 0.1);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .treatment-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .treatment-summary__value {
+    font-size: var(--font-size-base);
+  }
+  
+  .treatment-summary__change {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+/* ========================================
+   Mobile Optimization for Booking Pages
+   ======================================== */
+
+/* Optimize for 375px screens to get first input above the fold */
+@media (max-width: 480px) {
+  /* Reduce hero height on booking pages */
+  .hero {
+    padding: 2rem 0 1.5rem 0;
+  }
+  
+  .hero__title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 0.9375rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Tighten booking wrapper spacing */
+  .booking-wrapper {
+    padding: 1.25rem;
+  }
+  
+  /* Compact booking progress stepper */
+  .booking-progress {
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .booking-step {
+    gap: 0.375rem;
+  }
+  
+  .booking-step__number {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .booking-step__label {
+    font-size: 0.75rem;
+  }
+  
+  /* Reduce content title spacing */
+  .booking-content__title {
+    font-size: 1.375rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .booking-content__subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  /* Compact treatment options grid */
+  .treatment-options {
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .treatment-option__card {
+    padding: 0.875rem;
+  }
+  
+  .treatment-option__icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.375rem;
+  }
+  
+  .treatment-option__name {
+    font-size: 0.8125rem;
+  }
+  
+  .treatment-option__time {
+    font-size: 0.6875rem;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 375px) {
+  .hero {
+    padding: 1.5rem 0 1rem 0;
+  }
+  
+  .hero__title {
+    font-size: 1.5rem;
+  }
+  
+  .booking-progress {
+    margin-bottom: 1rem;
+  }
+  
+  .booking-content__title {
+    font-size: 1.25rem;
+  }
+}
 }

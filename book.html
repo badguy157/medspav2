@@ -66,7 +66,19 @@
           <h2 class="booking-content__title">What are you interested in?</h2>
           <p class="booking-content__subtitle">Select a treatment to get started. Not sure? Choose "General consultation."</p>
           
-          <div class="treatment-options">
+          <!-- Treatment Summary (shown when preselected from URL) -->
+          <div class="treatment-summary" id="treatment-summary" style="display: none;">
+            <div class="treatment-summary__content">
+              <p class="treatment-summary__label">Pre-selected treatment</p>
+              <p class="treatment-summary__value">
+                <span class="treatment-summary__icon" id="summary-icon"></span>
+                <span id="summary-name"></span>
+              </p>
+            </div>
+            <a href="#" class="treatment-summary__change" onclick="showAllTreatments(event)">Change</a>
+          </div>
+          
+          <div class="treatment-options" id="treatment-options">
             <label class="treatment-option">
               <input type="radio" name="treatment" value="botox" class="treatment-option__input">
               <div class="treatment-option__card">
@@ -86,29 +98,29 @@
             </label>
             
             <label class="treatment-option">
-              <input type="radio" name="treatment" value="skin-resurfacing" class="treatment-option__input">
+              <input type="radio" name="treatment" value="cheek-filler" class="treatment-option__input">
               <div class="treatment-option__card">
-                <div class="treatment-option__icon">🔬</div>
-                <div class="treatment-option__name">Skin Resurfacing</div>
-                <div class="treatment-option__time">45–60 min</div>
+                <div class="treatment-option__icon">✨</div>
+                <div class="treatment-option__name">Cheek Filler</div>
+                <div class="treatment-option__time">30–45 min</div>
               </div>
             </label>
             
             <label class="treatment-option">
-              <input type="radio" name="treatment" value="facials" class="treatment-option__input">
+              <input type="radio" name="treatment" value="under-eye-filler" class="treatment-option__input">
               <div class="treatment-option__card">
-                <div class="treatment-option__icon">🧴</div>
-                <div class="treatment-option__name">Facials</div>
-                <div class="treatment-option__time">60–90 min</div>
+                <div class="treatment-option__icon">👁️</div>
+                <div class="treatment-option__name">Under-Eye Filler</div>
+                <div class="treatment-option__time">30–45 min</div>
               </div>
             </label>
             
             <label class="treatment-option">
-              <input type="radio" name="treatment" value="body-contouring" class="treatment-option__input">
+              <input type="radio" name="treatment" value="chemical-peel" class="treatment-option__input">
               <div class="treatment-option__card">
-                <div class="treatment-option__icon">❄️</div>
-                <div class="treatment-option__name">Body Contouring</div>
-                <div class="treatment-option__time">30–60 min</div>
+                <div class="treatment-option__icon">🧪</div>
+                <div class="treatment-option__name">Chemical Peel</div>
+                <div class="treatment-option__time">30–45 min</div>
               </div>
             </label>
             
@@ -118,6 +130,87 @@
                 <div class="treatment-option__icon">🌟</div>
                 <div class="treatment-option__name">Microneedling</div>
                 <div class="treatment-option__time">30–45 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="laser-resurfacing" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">🔬</div>
+                <div class="treatment-option__name">Laser Resurfacing</div>
+                <div class="treatment-option__time">45–60 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="facial" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">🧴</div>
+                <div class="treatment-option__name">Facial</div>
+                <div class="treatment-option__time">60–90 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="led-therapy" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">💡</div>
+                <div class="treatment-option__name">LED Therapy</div>
+                <div class="treatment-option__time">30 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="fat-freezing" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">❄️</div>
+                <div class="treatment-option__name">Fat Freezing</div>
+                <div class="treatment-option__time">30–60 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="body-tightening" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">🔥</div>
+                <div class="treatment-option__name">Body Tightening</div>
+                <div class="treatment-option__time">30–60 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="muscle-toning" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">💪</div>
+                <div class="treatment-option__name">Muscle Toning</div>
+                <div class="treatment-option__time">30 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="skin-resurfacing" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">🔬</div>
+                <div class="treatment-option__name">Skin Resurfacing (General)</div>
+                <div class="treatment-option__time">45–60 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="facials" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">🧴</div>
+                <div class="treatment-option__name">Facials (General)</div>
+                <div class="treatment-option__time">60–90 min</div>
+              </div>
+            </label>
+            
+            <label class="treatment-option">
+              <input type="radio" name="treatment" value="body-contouring" class="treatment-option__input">
+              <div class="treatment-option__card">
+                <div class="treatment-option__icon">❄️</div>
+                <div class="treatment-option__name">Body Contouring (General)</div>
+                <div class="treatment-option__time">30–60 min</div>
               </div>
             </label>
             
@@ -221,6 +314,9 @@
           <p class="booking-content__subtitle">We'll use this info to confirm your appointment.</p>
           
           <form class="booking-form" onsubmit="submitBooking(event)">
+            <!-- Hidden input to store selected treatment -->
+            <input type="hidden" id="hidden-treatment" name="treatment" value="">
+            
             <div class="form-group">
               <label class="form-label" for="name">Full Name *</label>
               <input type="text" id="name" name="name" class="form-input" required>
@@ -241,6 +337,49 @@
               <textarea id="notes" name="notes" class="form-textarea" rows="4" placeholder="Anything we should know? Questions or concerns?"></textarea>
             </div>
             
+            <!-- Before You Submit Reassurance -->
+            <div class="reassurance-block">
+              <h3 class="reassurance-block__title">Before you submit</h3>
+              <div class="reassurance-block__content">
+                <div class="reassurance-item">
+                  <div class="reassurance-item__icon">⏱️</div>
+                  <div class="reassurance-item__text">
+                    <strong>We'll respond within 24 hours</strong> to confirm your appointment
+                  </div>
+                </div>
+                <div class="reassurance-item">
+                  <div class="reassurance-item__icon">💬</div>
+                  <div class="reassurance-item__text">
+                    <strong>Consultation length:</strong> 20–30 minutes for general consults, up to 45 minutes for specific treatments
+                  </div>
+                </div>
+                <div class="reassurance-item">
+                  <div class="reassurance-item__icon">✅</div>
+                  <div class="reassurance-item__text">
+                    <strong>What happens next:</strong> We'll confirm your time, send you our address, and answer any questions
+                  </div>
+                </div>
+                <div class="reassurance-item">
+                  <div class="reassurance-item__icon">🔄</div>
+                  <div class="reassurance-item__text">
+                    <strong>Need to reschedule?</strong> No problem. Just call or email us at least 24 hours before your appointment
+                  </div>
+                </div>
+                <div class="reassurance-item">
+                  <div class="reassurance-item__icon">🔒</div>
+                  <div class="reassurance-item__text">
+                    <strong>Your privacy:</strong> We'll never share your info with anyone. Your data stays private and secure
+                  </div>
+                </div>
+                <div class="reassurance-item">
+                  <div class="reassurance-item__icon">📞</div>
+                  <div class="reassurance-item__text">
+                    <strong>Prefer to call?</strong> Reach us at <a href="tel:555-123-4567">555-123-4567</a> during business hours
+                  </div>
+                </div>
+              </div>
+            </div>
+            
             <div class="booking-actions">
               <button type="button" class="btn btn--secondary btn--large" onclick="goToStep(2)">Back</button>
               <button type="submit" class="btn btn--primary btn--large">Request Appointment</button>
@@ -249,23 +388,47 @@
         </div>
 
         <!-- Confirmation State -->
-        <div class="booking-content booking-confirmation" data-content="confirmation">
-          <div class="confirmation-icon">✓</div>
-          <h2 class="booking-content__title">Request received!</h2>
-          <p class="booking-content__subtitle">Thank you for your interest. We'll review your request and confirm your appointment within 24 hours.</p>
-          
-          <div class="confirmation-details">
-            <h3>What's next?</h3>
-            <ul class="confirmation-steps">
-              <li>We'll call or email you to confirm your time slot</li>
-              <li>If you have questions before then, feel free to call us at (555) 123-4567</li>
-              <li>We'll send you prep instructions 24 hours before your visit</li>
-            </ul>
-          </div>
-          
-          <div class="booking-actions">
-            <a href="index.html" class="btn btn--primary btn--large">Back to Home</a>
-            <a href="treatments.html" class="btn btn--secondary btn--large">Browse Treatments</a>
+        <div class="booking-content booking-confirmation" data-content="confirmation" role="status" aria-live="polite">
+          <div class="confirmation-card">
+            <span class="confirmation-card__icon">✅</span>
+            <h2 class="confirmation-card__title">Request received!</h2>
+            <p class="confirmation-card__subtitle">Thank you for your interest. We'll review your request and confirm your appointment within 24 hours.</p>
+            
+            <div class="confirmation-card__steps">
+              <h3 class="confirmation-card__steps-title">What happens next</h3>
+              <div class="confirmation-step">
+                <div class="confirmation-step__number">1</div>
+                <div class="confirmation-step__content">
+                  <h4 class="confirmation-step__title">We'll confirm your appointment</h4>
+                  <p class="confirmation-step__description">We'll call or email you within 24 hours to confirm your preferred time slot. If that time doesn't work, we'll find one that does.</p>
+                </div>
+              </div>
+              <div class="confirmation-step">
+                <div class="confirmation-step__number">2</div>
+                <div class="confirmation-step__content">
+                  <h4 class="confirmation-step__title">Get ready for your visit</h4>
+                  <p class="confirmation-step__description">We'll send you prep instructions 24 hours before your consultation, including what to bring and what to expect.</p>
+                </div>
+              </div>
+              <div class="confirmation-step">
+                <div class="confirmation-step__number">3</div>
+                <div class="confirmation-step__content">
+                  <h4 class="confirmation-step__title">Come see us</h4>
+                  <p class="confirmation-step__description">Arrive a few minutes early to complete any paperwork. We'll discuss your goals and create a personalized plan.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="confirmation-card__actions">
+              <a href="#" class="btn btn--secondary" onclick="event.preventDefault(); alert('This would open a checklist of items to bring to your consultation.');">What to bring</a>
+              <a href="#" class="btn btn--secondary" onclick="event.preventDefault(); alert('This would show directions and parking information.');">Directions & Parking</a>
+              <a href="#" class="btn btn--secondary" onclick="event.preventDefault(); alert('This would download an .ics calendar file.');">Add to calendar</a>
+            </div>
+            
+            <div class="booking-actions" style="margin-top: 2rem;">
+              <a href="index.html" class="btn btn--primary btn--large">Back to Home</a>
+              <a href="treatments.html" class="btn btn--text">Browse Treatments</a>
+            </div>
           </div>
         </div>
       </div>
@@ -339,6 +502,27 @@
       notes: ''
     };
 
+    // Treatment metadata for displaying names and icons
+    const treatmentMeta = {
+      'botox': { name: 'Botox', icon: '💉' },
+      'lip-filler': { name: 'Lip Filler', icon: '💋' },
+      'cheek-filler': { name: 'Cheek Filler', icon: '✨' },
+      'under-eye-filler': { name: 'Under-Eye Filler', icon: '👁️' },
+      'chemical-peel': { name: 'Chemical Peel', icon: '🧪' },
+      'microneedling': { name: 'Microneedling', icon: '🌟' },
+      'laser-resurfacing': { name: 'Laser Resurfacing', icon: '🔬' },
+      'facial': { name: 'Facial', icon: '🧴' },
+      'led-therapy': { name: 'LED Therapy', icon: '💡' },
+      'fat-freezing': { name: 'Fat Freezing', icon: '❄️' },
+      'body-tightening': { name: 'Body Tightening', icon: '🔥' },
+      'muscle-toning': { name: 'Muscle Toning', icon: '💪' },
+      'skin-resurfacing': { name: 'Skin Resurfacing (General)', icon: '🔬' },
+      'facials': { name: 'Facials (General)', icon: '🧴' },
+      'body-contouring': { name: 'Body Contouring (General)', icon: '❄️' },
+      'consultation': { name: 'General Consultation', icon: '💬' },
+      'other': { name: 'Something Else', icon: '✨' }
+    };
+
     // Check URL for treatment parameter
     window.addEventListener('DOMContentLoaded', function() {
       const urlParams = new URLSearchParams(window.location.search);
@@ -348,9 +532,28 @@
         if (treatmentInput) {
           treatmentInput.checked = true;
           bookingData.treatment = treatment;
+          
+          // Show treatment summary
+          const meta = treatmentMeta[treatment];
+          if (meta) {
+            document.getElementById('summary-icon').textContent = meta.icon;
+            document.getElementById('summary-name').textContent = meta.name;
+            document.getElementById('treatment-summary').style.display = 'flex';
+            
+            // Hide treatment options initially when preselected
+            const treatmentOptions = document.getElementById('treatment-options');
+            treatmentOptions.style.display = 'none';
+          }
         }
       }
     });
+
+    // Function to show all treatments (when "Change" is clicked)
+    function showAllTreatments(event) {
+      event.preventDefault();
+      document.getElementById('treatment-summary').style.display = 'none';
+      document.getElementById('treatment-options').style.display = 'grid';
+    }
 
     function goToStep(step) {
       // Validate current step before proceeding
@@ -416,6 +619,9 @@
       bookingData.email = document.getElementById('email').value;
       bookingData.phone = document.getElementById('phone').value;
       bookingData.notes = document.getElementById('notes').value;
+      
+      // Update hidden treatment input
+      document.getElementById('hidden-treatment').value = bookingData.treatment;
 
       // In a real app, this would send to a server
       console.log('Booking submitted:', bookingData);

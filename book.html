@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Book a consultation at Fresh Glow MedSpa. Choose your treatment, pick a time, and schedule your visit.">
-  <title>Book Consultation - Fresh Glow MedSpa</title>
+  <meta name="description" content="Request a consultation at Fresh Glow MedSpa. Choose your treatment, pick a preferred time, and we'll confirm within 24 hours.">
+  <title>Request Consultation - Fresh Glow MedSpa</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -35,8 +35,8 @@
   <section class="hero">
     <div class="container">
       <div class="hero__content" style="text-align: center; max-width: 600px; margin: 0 auto;">
-        <h1 class="hero__title">Book your consultation</h1>
-        <p class="hero__subtitle">Three simple steps to schedule your visit. We'll confirm within 24 hours.</p>
+        <h1 class="hero__title">Request your consultation</h1>
+        <p class="hero__subtitle">Pick a treatment and a preferred time. We'll confirm within 24 hours.</p>
       </div>
     </div>
   </section>
@@ -47,13 +47,13 @@
       <div class="booking-wrapper">
         <!-- Progress Steps -->
         <div class="booking-progress">
-          <div class="booking-step booking-step--active" data-step="1">
+          <div class="booking-step is-active" data-step="1">
             <div class="booking-step__number">1</div>
             <div class="booking-step__label">Treatment</div>
           </div>
           <div class="booking-step" data-step="2">
             <div class="booking-step__number">2</div>
-            <div class="booking-step__label">Date & Time</div>
+            <div class="booking-step__label">Preferred Date & Time</div>
           </div>
           <div class="booking-step" data-step="3">
             <div class="booking-step__number">3</div>
@@ -317,6 +317,23 @@
             <!-- Hidden input to store selected treatment -->
             <input type="hidden" id="hidden-treatment" name="treatment" value="">
             
+            <!-- Appointment Summary -->
+            <div class="appointment-summary" id="appointment-summary">
+              <h3 class="appointment-summary__title">Your appointment request</h3>
+              <div class="appointment-summary__items">
+                <div class="appointment-summary__item">
+                  <span class="appointment-summary__label">Treatment:</span>
+                  <span class="appointment-summary__value" id="summary-treatment-name">—</span>
+                  <a href="#" class="appointment-summary__edit" onclick="goToStep(1); return false;">Edit</a>
+                </div>
+                <div class="appointment-summary__item">
+                  <span class="appointment-summary__label">Preferred time:</span>
+                  <span class="appointment-summary__value" id="summary-datetime">—</span>
+                  <a href="#" class="appointment-summary__edit" onclick="goToStep(2); return false;">Edit</a>
+                </div>
+              </div>
+            </div>
+            
             <div class="form-group">
               <label class="form-label" for="name">Full Name *</label>
               <input type="text" id="name" name="name" class="form-input" required>
@@ -565,17 +582,18 @@
       // Update current step
       currentStep = step;
 
-      // Update progress indicators
+      // Update progress indicators with proper state classes
       document.querySelectorAll('.booking-step').forEach((el, index) => {
-        if (index + 1 <= step) {
-          el.classList.add('booking-step--active');
-        } else {
-          el.classList.remove('booking-step--active');
-        }
-        if (index + 1 === step) {
-          el.classList.add('booking-step--current');
-        } else {
-          el.classList.remove('booking-step--current');
+        const stepNum = index + 1;
+        
+        // Remove all state classes
+        el.classList.remove('is-complete', 'is-active');
+        
+        // Add appropriate state class
+        if (stepNum < step) {
+          el.classList.add('is-complete');
+        } else if (stepNum === step) {
+          el.classList.add('is-active');
         }
       });
 
@@ -585,8 +603,30 @@
       });
       document.querySelector(`.booking-content[data-content="${step}"]`).classList.add('booking-content--active');
 
+      // Update appointment summary when going to step 3
+      if (step === 3) {
+        updateAppointmentSummary();
+      }
+
       // Scroll to top of booking section
       document.querySelector('.booking-wrapper').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Update appointment summary in step 3
+    function updateAppointmentSummary() {
+      // Update treatment name
+      const treatmentName = treatmentMeta[bookingData.treatment]?.name || bookingData.treatment;
+      document.getElementById('summary-treatment-name').textContent = treatmentName;
+      
+      // Update date/time
+      const dayLabel = bookingData.day.charAt(0).toUpperCase() + bookingData.day.slice(1);
+      const timeMap = {
+        'morning': 'Morning (9am – 12pm)',
+        'afternoon': 'Afternoon (12pm – 3pm)',
+        'evening': 'Evening (3pm – 6pm)'
+      };
+      const timeLabel = timeMap[bookingData.time] || bookingData.time;
+      document.getElementById('summary-datetime').textContent = `${dayLabel}, ${timeLabel}`;
     }
 
     function validateStep1() {

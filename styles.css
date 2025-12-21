@@ -2708,4 +2708,232 @@ p {
     font-size: 1.25rem;
   }
 }
+
+/* ========================================
+   Improved Stepper States
+   ======================================== */
+
+/* Completed step styling */
+.booking-step.is-complete .booking-step__number {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.booking-step.is-complete .booking-step__label {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+/* Active step styling */
+.booking-step.is-active .booking-step__number {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 0 0 4px rgba(74, 107, 92, 0.15);
+}
+
+.booking-step.is-active .booking-step__label {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ========================================
+   Appointment Summary
+   ======================================== */
+
+.appointment-summary {
+  background: var(--color-bg-light);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(42, 38, 34, 0.08);
+}
+
+.appointment-summary__title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.appointment-summary__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.appointment-summary__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.appointment-summary__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  min-width: 120px;
+}
+
+.appointment-summary__value {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text);
+  flex: 1;
+}
+
+.appointment-summary__edit {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.appointment-summary__edit:hover {
+  background: rgba(74, 107, 92, 0.1);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .appointment-summary {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .appointment-summary__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .appointment-summary__label {
+    min-width: auto;
+    font-size: 0.75rem;
+  }
+  
+  .appointment-summary__value {
+    font-size: 0.9375rem;
+  }
+  
+  .appointment-summary__edit {
+    align-self: flex-end;
+    margin-top: -0.5rem;
+  }
+}
+
+/* ========================================
+   Book.html Specific Hero Adjustments
+   ======================================== */
+
+/* Reduce hero padding on book.html only - target by body or section context */
+body:has(.booking-wrapper) .hero {
+  padding: 2rem 0 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  body:has(.booking-wrapper) .hero {
+    padding: 1.5rem 0 1rem 0;
+  }
+}
+
+/* ========================================
+   Booking Wrapper Card Integration
+   ======================================== */
+
+.booking-wrapper {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.booking-progress {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(42, 38, 34, 0.08);
+}
+
+@media (max-width: 768px) {
+  .booking-wrapper {
+    padding: 1.5rem;
+  }
+  
+  .booking-progress {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ========================================
+   Mobile Step 3 Button Improvements
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Make buttons stack on mobile */
+  .booking-content[data-content="3"] .booking-actions {
+    position: sticky;
+    bottom: 0;
+    background: var(--color-white);
+    padding: 1rem;
+    margin: 0 -1.5rem -1.5rem;
+    border-top: 1px solid rgba(42, 38, 34, 0.08);
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+    z-index: 10;
+  }
+  
+  .booking-content[data-content="3"] .booking-actions .btn {
+    width: 100%;
+    margin: 0;
+  }
+  
+  /* Add padding to form to prevent content hiding under sticky buttons */
+  .booking-content[data-content="3"] .booking-form {
+    padding-bottom: 1rem;
+  }
+}
+
+/* Ensure focus states are visible */
+.booking-actions .btn:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   Demo Banner Adjustments
+   ======================================== */
+
+.demo-banner {
+  background-color: rgba(42, 38, 34, 0.05);
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  border-bottom: 1px solid rgba(42, 38, 34, 0.06);
+}
+
+.demo-banner a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.demo-banner a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .demo-banner {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+  }
+}
 }

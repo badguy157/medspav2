@@ -31,12 +31,15 @@
     </div>
   </nav>
 
+  <!-- Main Content -->
+  <main data-treatment="coolsculpt">
+  
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
       <div class="hero__content">
-        <h1 class="hero__title">CoolSculpt (Fat Freezing)</h1>
-        <p class="hero__subtitle">Freeze away stubborn fat—no surgery, no needles.</p>
+        <h1 class="hero__title" id="treatmentTitle">CoolSculpt (Fat Freezing)</h1>
+        <p class="hero__subtitle" id="treatmentTagline">Freeze away stubborn fat—no surgery, no needles.</p>
         <div class="mt-xl">
           <a href="book.html?treatment=fat-freezing" class="btn btn--primary btn--large">Request a consultation</a>
         </div>
@@ -51,7 +54,7 @@
         <h2>Who it's for</h2>
         <p class="section__subtitle">CoolSculpt might be a good fit if you:</p>
       </div>
-      <div class="trust-grid">
+      <div class="trust-grid" id="whoForGrid">
         <div class="trust-item">
           <div class="trust-item__icon">🎯</div>
           <h3 class="trust-item__title">Stubborn fat</h3>
@@ -83,7 +86,7 @@
         <h2>The process</h2>
         <p class="section__subtitle">What happens during your CoolSculpt appointment</p>
       </div>
-      <div class="steps">
+      <div class="steps" id="processSteps">
         <div class="step">
           <div class="step__number">1</div>
           <div class="step__content">
@@ -130,7 +133,7 @@
         <h2>Timeline & results</h2>
         <p class="section__subtitle">What to expect after your CoolSculpt treatment</p>
       </div>
-      <div class="faq-list">
+      <div class="faq-list" id="timelineList">
         <div class="faq-item">
           <h3 class="faq-item__question">Day 1: Right after treatment</h3>
           <p class="faq-item__answer">The treated area may be red, swollen, or numb. This is normal. You can return to work and exercise immediately—there's no downtime.</p>
@@ -161,7 +164,7 @@
       <div class="section__header">
         <h2>Frequently asked questions</h2>
       </div>
-      <div class="faq-list">
+      <div class="faq-list" id="faqList">
         <div class="faq-item">
           <h3 class="faq-item__question">Does CoolSculpt hurt?</h3>
           <p class="faq-item__answer">You'll feel intense cold and pulling for the first 5-10 minutes, then the area goes numb. Most people read, work, or nap during treatment. There's no pain, just minor discomfort initially.</p>
@@ -193,7 +196,7 @@
         <h2>What our clients say</h2>
       </div>
       <div style="max-width: 700px; margin: 0 auto;">
-        <div class="social-proof-testimonial">
+        <div class="social-proof-testimonial" id="testimonialBlock">
           <p class="social-proof-testimonial__quote">"I was skeptical at first, but wow! After 10 weeks, my love handles are practically gone. I can finally wear fitted shirts without feeling self-conscious. No surgery, no downtime—just results."</p>
           <p class="social-proof-testimonial__author">Michael R.</p>
           <p class="social-proof-testimonial__treatment">CoolSculpt treatment (Sample testimonial)</p>
@@ -204,7 +207,7 @@
 
   <!-- Bottom CTA Section -->
   <section class="section section--primary">
-    <div class="container text-center">
+    <div class="container text-center" id="bottomCta">
       <h2>Ready to freeze away stubborn fat?</h2>
       <p class="section__subtitle">Book your CoolSculpt consultation and take the first step toward a more contoured you.</p>
       <div class="mt-xl">
@@ -212,6 +215,9 @@
       </div>
     </div>
   </section>
+
+  </main>
+  <!-- End Main Content -->
 
   <!-- Footer -->
   <footer class="footer">
@@ -291,5 +297,9 @@
       window.addEventListener('scroll', handleScroll, { passive: true });
     })();
   </script>
+
+  <!-- Treatment Detail Scripts -->
+  <script src="treatment-detail-data.js"></script>
+  <script src="treatment-detail.js"></script>
 </body>
 </html>

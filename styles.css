@@ -1431,11 +1431,37 @@ p {
   border: 1px solid rgba(42, 38, 34, 0.04);
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
   text-align: left;
+  position: relative;
 }
 
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 40px rgba(42, 38, 34, 0.08);
+}
+
+/* Clickable card wrapper */
+.card--clickable {
+  cursor: pointer;
+}
+
+.card__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.card__link:hover {
+  text-decoration: none;
+}
+
+/* Ensure button stays clickable above the card link */
+.card .btn {
+  position: relative;
+  z-index: 2;
 }
 
 .card__icon {

@@ -394,10 +394,10 @@
           resultCards.forEach(card => {
             const category = card.getAttribute('data-category');
             if (filter === 'all' || category === filter) {
-              card.style.display = '';
-              card.setAttribute('aria-hidden', 'false');
+              card.classList.remove('hidden');
+              card.removeAttribute('aria-hidden');
             } else {
-              card.style.display = 'none';
+              card.classList.add('hidden');
               card.setAttribute('aria-hidden', 'true');
             }
           });

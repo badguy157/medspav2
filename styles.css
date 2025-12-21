@@ -1431,7 +1431,6 @@ p {
   border: 1px solid rgba(42, 38, 34, 0.04);
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
   text-align: left;
-  position: relative;
 }
 
 .card:hover {
@@ -1442,6 +1441,7 @@ p {
 /* Clickable card wrapper */
 .card--clickable {
   cursor: pointer;
+  position: relative;
 }
 
 .card__link {

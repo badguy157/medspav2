@@ -2664,22 +2664,7 @@ p {
 /* --------------------------------------------------------------------------
    Demo Banner & Demo Note
    -------------------------------------------------------------------------- */
-.demo-banner {
-  background-color: var(--color-dark-gray);
-  color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: var(--spacing-sm) var(--spacing-md);
-  font-size: var(--font-size-sm);
-}
-
-.demo-banner a {
-  color: var(--color-secondary);
-  text-decoration: underline;
-}
-
-.demo-banner a:hover {
-  color: var(--color-secondary-dark);
-}
+/* Note: Main demo-banner styles are defined at the end of the file */
 
 .demo-note {
   text-align: center;
@@ -3388,7 +3373,7 @@ body.booking-page .hero {
 }
 
 /* ========================================
-   Demo Banner Adjustments
+   Demo Banner - Consistent across all pages
    ======================================== */
 
 .demo-banner {
@@ -3396,6 +3381,7 @@ body.booking-page .hero {
   padding: 0.5rem 1rem;
   text-align: center;
   font-size: 0.8125rem;
+  line-height: 1.4;
   color: var(--color-text-light);
   border-bottom: 1px solid rgba(42, 38, 34, 0.06);
 }
@@ -3409,10 +3395,12 @@ body.booking-page .hero {
   text-decoration: underline;
 }
 
+/* Mobile: Reduce height to not push hero down */
 @media (max-width: 768px) {
   .demo-banner {
-    font-size: 0.75rem;
-    padding: 0.375rem 0.75rem;
+    font-size: 0.7rem;
+    line-height: 1.3;
+    padding: 0.3rem 0.5rem;
   }
 }
 }

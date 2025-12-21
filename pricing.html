@@ -183,11 +183,213 @@
 
   <!-- CTA Section -->
   <section class="section section--primary">
-    <div class="container text-center">
-      <h2>Get exact pricing for you</h2>
-      <p class="section__subtitle">Book a free consultation. We'll look at your goals and give you a clear price. No surprises.</p>
-      <div class="mt-xl">
-        <a href="book.html" class="btn btn--primary btn--large">Request a consultation</a>
+    <div class="container">
+      <div class="pricing-cta-wrapper">
+        <h2 class="text-center">Get exact pricing for you</h2>
+        <p class="section__subtitle text-center">Book a free consultation. We'll look at your goals and give you a clear price. No surprises.</p>
+        
+        <!-- Inline Mini Form -->
+        <div class="pricing-form-card" id="pricing-form-card">
+          <form class="pricing-form" id="pricing-quick-form" onsubmit="handlePricingFormSubmit(event)">
+            <div class="pricing-form__grid">
+              <div class="form-group">
+                <label class="form-label" for="pricing-treatment">Treatment Interest *</label>
+                <select id="pricing-treatment" name="treatment" class="form-select" required>
+                  <option value="">Select a treatment...</option>
+                  <optgroup label="Injectables">
+                    <option value="botox">Botox</option>
+                    <option value="lip-filler">Lip Filler</option>
+                    <option value="cheek-filler">Cheek Filler</option>
+                    <option value="under-eye-filler">Under-Eye Filler</option>
+                  </optgroup>
+                  <optgroup label="Skin Treatments">
+                    <option value="facial">Facial</option>
+                    <option value="chemical-peel">Chemical Peel</option>
+                    <option value="microneedling">Microneedling</option>
+                    <option value="laser-resurfacing">Laser Resurfacing</option>
+                    <option value="led-therapy">LED Therapy</option>
+                  </optgroup>
+                  <optgroup label="Body Treatments">
+                    <option value="fat-freezing">Fat Freezing (CoolSculpt)</option>
+                    <option value="body-tightening">Body Tightening</option>
+                    <option value="muscle-toning">Muscle Toning</option>
+                  </optgroup>
+                  <optgroup label="Other">
+                    <option value="consultation">General Consultation</option>
+                    <option value="other">Something Else</option>
+                  </optgroup>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="pricing-name">Full Name *</label>
+                <input type="text" id="pricing-name" name="name" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="pricing-contact">Email or Phone *</label>
+                <input type="text" id="pricing-contact" name="contact" class="form-input" placeholder="email@example.com or (555) 123-4567" required>
+              </div>
+              
+              <div class="form-group form-group--full">
+                <label class="form-label" for="pricing-note">Additional Note (Optional)</label>
+                <textarea id="pricing-note" name="note" class="form-textarea" rows="3" placeholder="Any specific questions or concerns?"></textarea>
+              </div>
+            </div>
+            
+            <div class="pricing-form__actions">
+              <button type="submit" class="btn btn--primary btn--large">Request Pricing Information</button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Success State (Hidden by default) -->
+        <div class="pricing-success-card" id="pricing-success-card" style="display: none;">
+          <div class="pricing-success__icon">✅</div>
+          <h3 class="pricing-success__title">Request received!</h3>
+          <p class="pricing-success__message">We'll confirm within 24 hours.</p>
+          <div class="pricing-success__actions">
+            <a href="#" class="btn btn--primary btn--large" id="continue-booking-btn">Continue to booking</a>
+            <button type="button" class="btn btn--secondary" onclick="resetPricingForm()">Submit another request</button>
+          </div>
+        </div>
+        
+        <div class="mt-xl text-center">
+          <p class="pricing-alt-text">Or <a href="book.html" class="pricing-alt-link">go directly to booking</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2>Pricing Questions</h2>
+        <p class="section__subtitle">Common questions about our pricing, policies, and payment options.</p>
+      </div>
+      
+      <div class="faq-accordion">
+        <div class="faq-accordion-item">
+          <button class="faq-accordion-button" onclick="toggleFaqItem(this)">
+            <span class="faq-accordion-question">What affects the price of my treatment?</span>
+            <span class="faq-accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p>Several factors influence your final price:</p>
+            <ul class="bullet-list">
+              <li><strong>Treatment area size:</strong> Larger areas require more product or time, which affects cost.</li>
+              <li><strong>Your goals:</strong> More dramatic changes may require more sessions or product.</li>
+              <li><strong>Product amount:</strong> For injectables, the number of units or syringes needed.</li>
+              <li><strong>Number of sessions:</strong> Some treatments require multiple visits for best results.</li>
+              <li><strong>Membership status:</strong> Our members receive 10-20% off all treatments.</li>
+            </ul>
+            <p>We'll give you an exact quote during your free consultation, so you know the price before committing.</p>
+          </div>
+        </div>
+        
+        <div class="faq-accordion-item">
+          <button class="faq-accordion-button" onclick="toggleFaqItem(this)">
+            <span class="faq-accordion-question">Do you require a deposit?</span>
+            <span class="faq-accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p><em class="demo-label">(Sample policy)</em></p>
+            <p>For most treatments, we require a $50 deposit when you book your appointment. This deposit:</p>
+            <ul class="bullet-list">
+              <li>Goes toward your treatment cost</li>
+              <li>Is fully refundable if you cancel 48+ hours in advance</li>
+              <li>Helps us reserve your appointment time</li>
+            </ul>
+            <p>Consultations are always free with no deposit required.</p>
+          </div>
+        </div>
+        
+        <div class="faq-accordion-item">
+          <button class="faq-accordion-button" onclick="toggleFaqItem(this)">
+            <span class="faq-accordion-question">Is there a consultation fee?</span>
+            <span class="faq-accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p><em class="demo-label">(Sample policy)</em></p>
+            <p>No! Your first consultation is always complimentary. During your consultation, we'll:</p>
+            <ul class="bullet-list">
+              <li>Discuss your goals and concerns</li>
+              <li>Assess your treatment area</li>
+              <li>Recommend the best treatment plan for you</li>
+              <li>Provide exact pricing with no obligation to book</li>
+            </ul>
+            <p>There's no pressure—take your time to decide what's right for you.</p>
+          </div>
+        </div>
+        
+        <div class="faq-accordion-item">
+          <button class="faq-accordion-button" onclick="toggleFaqItem(this)">
+            <span class="faq-accordion-question">How many sessions will I need?</span>
+            <span class="faq-accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p>The number of sessions varies by treatment and your individual goals:</p>
+            <ul class="bullet-list">
+              <li><strong>Botox & Fillers:</strong> Typically one session, with touch-ups as needed (every 3-12 months).</li>
+              <li><strong>Laser treatments:</strong> Usually 3-5 sessions for optimal results.</li>
+              <li><strong>Chemical peels:</strong> Often 1 session for light peels, 3-6 for deeper results.</li>
+              <li><strong>Body contouring:</strong> Typically 4-8 sessions depending on area and goals.</li>
+            </ul>
+            <p>We'll create a personalized treatment plan during your consultation, so you know exactly what to expect—and the total cost—before you start.</p>
+          </div>
+        </div>
+        
+        <div class="faq-accordion-item">
+          <button class="faq-accordion-button" onclick="toggleFaqItem(this)">
+            <span class="faq-accordion-question">What is your cancellation and reschedule policy?</span>
+            <span class="faq-accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p><em class="demo-label">(Sample policy)</em></p>
+            <p>We understand that life happens. Here's our policy:</p>
+            <ul class="bullet-list">
+              <li><strong>48+ hours notice:</strong> Full refund of any deposit, or free reschedule.</li>
+              <li><strong>24-48 hours notice:</strong> We'll work with you to reschedule. Deposit may be forfeited.</li>
+              <li><strong>Less than 24 hours:</strong> Deposit is forfeited, but we'll do our best to accommodate a reschedule.</li>
+            </ul>
+            <p>To cancel or reschedule, call us at (555) 123-4567 or email hello@freshglow.example.</p>
+          </div>
+        </div>
+        
+        <div class="faq-accordion-item">
+          <button class="faq-accordion-button" onclick="toggleFaqItem(this)">
+            <span class="faq-accordion-question">Do you offer financing or payment plans?</span>
+            <span class="faq-accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p><em class="demo-label">(Sample policy)</em></p>
+            <p>Yes! We want everyone to access the treatments they need. We offer:</p>
+            <ul class="bullet-list">
+              <li><strong>Third-party financing:</strong> Approved applicants can finance treatments through Cherry or CareCredit.</li>
+              <li><strong>Payment plans:</strong> For treatments over $1,000, we offer 3-6 month payment plans with no interest.</li>
+              <li><strong>Membership discounts:</strong> Join our membership program for 10-20% off every treatment.</li>
+              <li><strong>Package deals:</strong> Save when you book multiple sessions upfront.</li>
+            </ul>
+            <p>Ask about financing options during your consultation—we'll help you find a plan that works for your budget.</p>
+          </div>
+        </div>
+        
+        <div class="faq-accordion-item">
+          <button class="faq-accordion-button" onclick="toggleFaqItem(this)">
+            <span class="faq-accordion-question">Can I get an exact price before my consultation?</span>
+            <span class="faq-accordion-icon">+</span>
+          </button>
+          <div class="faq-accordion-content">
+            <p>While we provide price ranges on this page, exact pricing depends on individual factors. However, you can get a better estimate by:</p>
+            <ul class="bullet-list">
+              <li><strong>Calling us:</strong> Describe your goals at (555) 123-4567, and we'll give you a more specific range.</li>
+              <li><strong>Virtual consultation:</strong> Send us photos for a preliminary assessment (email hello@freshglow.example).</li>
+              <li><strong>In-person consultation:</strong> Get an exact quote tailored to your needs—always free!</li>
+            </ul>
+            <p>We believe in transparent pricing, so you'll know exactly what you'll pay before you commit to any treatment.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -269,6 +471,58 @@
       // Listen to scroll events with passive flag for better performance
       window.addEventListener('scroll', handleScroll, { passive: true });
     })();
+
+    // Pricing form submission handler
+    function handlePricingFormSubmit(event) {
+      event.preventDefault();
+      
+      const formData = {
+        treatment: document.getElementById('pricing-treatment').value,
+        name: document.getElementById('pricing-name').value,
+        contact: document.getElementById('pricing-contact').value,
+        note: document.getElementById('pricing-note').value
+      };
+      
+      // In a real app, this would send to a server
+      console.log('Pricing request submitted:', formData);
+      
+      // Hide form, show success state
+      document.getElementById('pricing-form-card').style.display = 'none';
+      document.getElementById('pricing-success-card').style.display = 'block';
+      
+      // Update "Continue to booking" link with treatment parameter
+      const continueBtn = document.getElementById('continue-booking-btn');
+      continueBtn.href = `book.html?treatment=${formData.treatment}`;
+      
+      // Scroll to success message
+      document.getElementById('pricing-success-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    
+    // Reset pricing form to initial state
+    function resetPricingForm() {
+      document.getElementById('pricing-quick-form').reset();
+      document.getElementById('pricing-form-card').style.display = 'block';
+      document.getElementById('pricing-success-card').style.display = 'none';
+      document.getElementById('pricing-form-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    
+    // FAQ accordion toggle
+    function toggleFaqItem(button) {
+      const item = button.closest('.faq-accordion-item');
+      const content = item.querySelector('.faq-accordion-content');
+      const icon = button.querySelector('.faq-accordion-icon');
+      const isOpen = item.classList.contains('faq-accordion-item--open');
+      
+      if (isOpen) {
+        item.classList.remove('faq-accordion-item--open');
+        content.style.maxHeight = null;
+        icon.textContent = '+';
+      } else {
+        item.classList.add('faq-accordion-item--open');
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon.textContent = '-';
+      }
+    }
   </script>
 </body>
 </html>

@@ -130,11 +130,96 @@
             <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your goals, ask questions, or let us know the best time to reach you."></textarea>
           </div>
 
+          <!-- Before You Submit Reassurance -->
+          <div class="reassurance-block">
+            <h3 class="reassurance-block__title">Before you submit</h3>
+            <div class="reassurance-block__content">
+              <div class="reassurance-item">
+                <div class="reassurance-item__icon">⏱️</div>
+                <div class="reassurance-item__text">
+                  <strong>We'll respond within 24 hours</strong> to confirm your appointment
+                </div>
+              </div>
+              <div class="reassurance-item">
+                <div class="reassurance-item__icon">💬</div>
+                <div class="reassurance-item__text">
+                  <strong>Consultation length:</strong> 20–30 minutes for general consults, up to 45 minutes for specific treatments
+                </div>
+              </div>
+              <div class="reassurance-item">
+                <div class="reassurance-item__icon">✅</div>
+                <div class="reassurance-item__text">
+                  <strong>What happens next:</strong> We'll confirm your time, send you our address, and answer any questions
+                </div>
+              </div>
+              <div class="reassurance-item">
+                <div class="reassurance-item__icon">🔄</div>
+                <div class="reassurance-item__text">
+                  <strong>Need to reschedule?</strong> No problem. Just call or email us at least 24 hours before your appointment
+                </div>
+              </div>
+              <div class="reassurance-item">
+                <div class="reassurance-item__icon">🔒</div>
+                <div class="reassurance-item__text">
+                  <strong>Your privacy:</strong> We'll never share your info with anyone. Your data stays private and secure
+                </div>
+              </div>
+              <div class="reassurance-item">
+                <div class="reassurance-item__icon">📞</div>
+                <div class="reassurance-item__text">
+                  <strong>Prefer to call?</strong> Reach us at <a href="tel:555-123-4567">555-123-4567</a> during business hours
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="btn-group" style="justify-content: center;">
             <button type="submit" class="btn btn--primary btn--large">Submit request</button>
             <a href="tel:555-123-4567" class="btn btn--secondary btn--large">Call us instead</a>
           </div>
         </form>
+        
+        <!-- Confirmation Card (initially hidden) -->
+        <div id="contact-confirmation" class="confirmation-card" style="display: none;" role="status" aria-live="polite">
+          <span class="confirmation-card__icon">✅</span>
+          <h2 class="confirmation-card__title">Message received!</h2>
+          <p class="confirmation-card__subtitle">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+          
+          <div class="confirmation-card__steps">
+            <h3 class="confirmation-card__steps-title">What happens next</h3>
+            <div class="confirmation-step">
+              <div class="confirmation-step__number">1</div>
+              <div class="confirmation-step__content">
+                <h4 class="confirmation-step__title">We'll review your message</h4>
+                <p class="confirmation-step__description">Our team will read your message and gather any information we need to help you.</p>
+              </div>
+            </div>
+            <div class="confirmation-step">
+              <div class="confirmation-step__number">2</div>
+              <div class="confirmation-step__content">
+                <h4 class="confirmation-step__title">We'll reach out within 24 hours</h4>
+                <p class="confirmation-step__description">We'll call or email you (whichever you prefer) to answer your questions or schedule your consultation.</p>
+              </div>
+            </div>
+            <div class="confirmation-step">
+              <div class="confirmation-step__number">3</div>
+              <div class="confirmation-step__content">
+                <h4 class="confirmation-step__title">Come see us</h4>
+                <p class="confirmation-step__description">Once we confirm your appointment, we'll send you everything you need to know before your visit.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="confirmation-card__actions">
+            <a href="#" class="btn btn--secondary" onclick="event.preventDefault(); alert('This would open a checklist of items to bring to your consultation.');">What to bring</a>
+            <a href="#" class="btn btn--secondary" onclick="event.preventDefault(); alert('This would show directions and parking information.');">Directions & Parking</a>
+            <a href="#" class="btn btn--secondary" onclick="event.preventDefault(); alert('This would download an .ics calendar file.');">Add to calendar</a>
+          </div>
+          
+          <div style="margin-top: 2rem;">
+            <a href="index.html" class="btn btn--primary btn--large">Back to Home</a>
+          </div>
+        </div>
       </div>
 
       <!-- Map Placeholder -->
@@ -290,7 +375,26 @@
     // Simple form handling (demo only)
     document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Thank you for your request! In a real site, this would submit your information. We would contact you within 24 hours.');
+      
+      // Hide the form
+      const form = e.target;
+      form.style.display = 'none';
+      
+      // Show the confirmation card
+      const confirmation = document.getElementById('contact-confirmation');
+      confirmation.style.display = 'block';
+      
+      // Scroll to the confirmation
+      confirmation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+      // In a real site, this would submit the data to a server
+      console.log('Form submitted with data:', {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        treatment: document.getElementById('treatment').value,
+        message: document.getElementById('message').value
+      });
     });
   </script>
 </body>

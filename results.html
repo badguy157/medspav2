@@ -35,8 +35,8 @@
   <section class="hero">
     <div class="container">
       <div class="hero__content">
-        <h1 class="hero__title">Real results</h1>
-        <p class="hero__subtitle">See what our treatments can do. These are real people who wanted natural results, and got them.</p>
+        <h1 class="hero__title">Example results</h1>
+        <p class="hero__subtitle">See what our treatments can do. These are sample transformations showcasing natural-looking results.</p>
       </div>
     </div>
   </section>
@@ -49,8 +49,16 @@
         <p class="section__subtitle">Every face is different. But the goal is always the same: you, just fresher.</p>
       </div>
       
+      <!-- Filter Buttons -->
+      <div class="results-filters" role="group" aria-label="Filter results by category">
+        <button class="filter-btn filter-btn--active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="injectables" aria-pressed="false">Injectables</button>
+        <button class="filter-btn" data-filter="skin" aria-pressed="false">Skin</button>
+        <button class="filter-btn" data-filter="body" aria-pressed="false">Body</button>
+      </div>
+      
       <div class="results-grid">
-        <div class="result-card">
+        <div class="result-card" data-category="injectables">
           <div class="result-card__images">
             <figure class="result-card__figure">
               <img 
@@ -70,9 +78,15 @@
             </figure>
           </div>
           <p class="result-card__caption">"Smoother forehead lines, still natural."</p>
+          <div class="result-card__details">
+            <div class="result-detail"><strong>Treatment:</strong> Botox</div>
+            <div class="result-detail"><strong>Timeframe:</strong> 2 weeks</div>
+            <div class="result-detail"><strong>Sessions:</strong> 1</div>
+            <div class="result-detail"><strong>Provider:</strong> Demo (Sample)</div>
+          </div>
         </div>
 
-        <div class="result-card">
+        <div class="result-card" data-category="injectables">
           <div class="result-card__images">
             <figure class="result-card__figure">
               <img 
@@ -92,9 +106,15 @@
             </figure>
           </div>
           <p class="result-card__caption">"Fuller lips, but still looks like me."</p>
+          <div class="result-card__details">
+            <div class="result-detail"><strong>Treatment:</strong> Lip Filler</div>
+            <div class="result-detail"><strong>Timeframe:</strong> Immediate</div>
+            <div class="result-detail"><strong>Sessions:</strong> 1</div>
+            <div class="result-detail"><strong>Provider:</strong> Demo (Sample)</div>
+          </div>
         </div>
 
-        <div class="result-card">
+        <div class="result-card" data-category="injectables">
           <div class="result-card__images">
             <figure class="result-card__figure">
               <img 
@@ -114,9 +134,15 @@
             </figure>
           </div>
           <p class="result-card__caption">"No more tired look. I actually feel awake now."</p>
+          <div class="result-card__details">
+            <div class="result-detail"><strong>Treatment:</strong> Under-Eye Filler</div>
+            <div class="result-detail"><strong>Timeframe:</strong> Immediate</div>
+            <div class="result-detail"><strong>Sessions:</strong> 1</div>
+            <div class="result-detail"><strong>Provider:</strong> Demo (Sample)</div>
+          </div>
         </div>
 
-        <div class="result-card">
+        <div class="result-card" data-category="skin">
           <div class="result-card__images">
             <figure class="result-card__figure">
               <img 
@@ -136,9 +162,15 @@
             </figure>
           </div>
           <p class="result-card__caption">"Brighter, more even skin tone."</p>
+          <div class="result-card__details">
+            <div class="result-detail"><strong>Treatment:</strong> Chemical Peel</div>
+            <div class="result-detail"><strong>Timeframe:</strong> 4 weeks</div>
+            <div class="result-detail"><strong>Sessions:</strong> 3</div>
+            <div class="result-detail"><strong>Provider:</strong> Demo (Sample)</div>
+          </div>
         </div>
 
-        <div class="result-card">
+        <div class="result-card" data-category="injectables">
           <div class="result-card__images">
             <figure class="result-card__figure">
               <img 
@@ -158,9 +190,15 @@
             </figure>
           </div>
           <p class="result-card__caption">"Lifted cheeks without looking 'done'."</p>
+          <div class="result-card__details">
+            <div class="result-detail"><strong>Treatment:</strong> Cheek Filler</div>
+            <div class="result-detail"><strong>Timeframe:</strong> Immediate</div>
+            <div class="result-detail"><strong>Sessions:</strong> 1</div>
+            <div class="result-detail"><strong>Provider:</strong> Demo (Sample)</div>
+          </div>
         </div>
 
-        <div class="result-card">
+        <div class="result-card" data-category="skin">
           <div class="result-card__images">
             <figure class="result-card__figure">
               <img 
@@ -180,6 +218,12 @@
             </figure>
           </div>
           <p class="result-card__caption">"Smaller pores, smoother texture."</p>
+          <div class="result-card__details">
+            <div class="result-detail"><strong>Treatment:</strong> Microneedling</div>
+            <div class="result-detail"><strong>Timeframe:</strong> 8 weeks</div>
+            <div class="result-detail"><strong>Sessions:</strong> 4</div>
+            <div class="result-detail"><strong>Provider:</strong> Demo (Sample)</div>
+          </div>
         </div>
       </div>
 
@@ -194,7 +238,7 @@
     <div class="container">
       <div class="section__header">
         <h2>What our clients say</h2>
-        <p class="section__subtitle">Real words from real people who visited us.</p>
+        <p class="section__subtitle">Sample testimonials demonstrating client experiences.</p>
       </div>
       
       <div class="testimonial-grid">
@@ -325,6 +369,40 @@
 
       // Listen to scroll events with passive flag for better performance
       window.addEventListener('scroll', handleScroll, { passive: true });
+    })();
+
+    // Results filtering
+    (function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const resultCards = document.querySelectorAll('.result-card');
+
+      if (filterButtons.length === 0 || resultCards.length === 0) return;
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const filter = this.getAttribute('data-filter');
+
+          // Update active state on buttons
+          filterButtons.forEach(btn => {
+            btn.classList.remove('filter-btn--active');
+            btn.setAttribute('aria-pressed', 'false');
+          });
+          this.classList.add('filter-btn--active');
+          this.setAttribute('aria-pressed', 'true');
+
+          // Filter result cards
+          resultCards.forEach(card => {
+            const category = card.getAttribute('data-category');
+            if (filter === 'all' || category === filter) {
+              card.classList.remove('hidden');
+              card.removeAttribute('aria-hidden');
+            } else {
+              card.classList.add('hidden');
+              card.setAttribute('aria-hidden', 'true');
+            }
+          });
+        });
+      });
     })();
   </script>
 </body>

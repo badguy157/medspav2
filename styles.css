@@ -3080,78 +3080,73 @@ p {
 
 .secondary-ctas {
   display: flex;
-  flex-wrap: wrap;
   gap: 12px;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
+  margin: 18px 0 22px;
 }
 
-.secondary-cta-btn {
+.secondary-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 46px;
-  padding: 0 20px;
-  background: rgba(74, 107, 92, 0.08);
-  border: 1px solid rgba(74, 107, 92, 0.25);
+  height: 44px;
+  padding: 0 18px;
   border-radius: 999px;
-  color: var(--color-primary);
-  font-size: var(--font-size-base);
-  font-weight: 600;
-  letter-spacing: 0;
   text-decoration: none;
+  font-weight: 600;
+  background: rgba(47, 92, 76, 0.08);
+  border: 1px solid rgba(47, 92, 76, 0.25);
+  color: #2f5c4c;
   transition: all var(--transition-smooth);
   cursor: pointer;
   white-space: nowrap;
 }
 
-.secondary-cta-btn:hover {
-  background: rgba(74, 107, 92, 0.12);
-  border-color: rgba(74, 107, 92, 0.35);
-  color: var(--color-primary-dark);
+.secondary-cta:hover {
+  background: rgba(47, 92, 76, 0.12);
+  border-color: rgba(47, 92, 76, 0.35);
+  color: #2f5c4c;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(74, 107, 92, 0.15);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
   text-decoration: none;
 }
 
-.secondary-cta-btn:focus-visible {
-  outline: 3px solid rgba(74, 107, 92, 0.3);
+.secondary-cta:focus-visible {
+  outline: 3px solid rgba(47, 92, 76, 0.35);
   outline-offset: 2px;
 }
 
-.secondary-cta-btn:active {
+.secondary-cta:active {
   transform: translateY(0);
 }
 
 /* Mobile: stack vertically full-width */
-@media (max-width: 599px) {
+@media (max-width: 520px) {
   .secondary-ctas {
-    flex-direction: column;
-    width: 100%;
+    justify-content: stretch;
   }
   
-  .secondary-cta-btn {
+  .secondary-cta {
     width: 100%;
   }
 }
 
 /* Tablet: 2 buttons on first row, 1 centered on second row */
-@media (min-width: 600px) {
+@media (min-width: 521px) and (max-width: 767px) {
   .secondary-ctas {
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
   }
   
-  .secondary-cta-btn:nth-child(1),
-  .secondary-cta-btn:nth-child(2) {
+  .secondary-cta:nth-child(1),
+  .secondary-cta:nth-child(2) {
     flex: 1 1 calc(50% - 6px);
     min-width: 0;
   }
   
-  .secondary-cta-btn:nth-child(3) {
+  .secondary-cta:nth-child(3) {
     flex: 0 1 auto;
   }
 }
@@ -3160,9 +3155,11 @@ p {
 @media (min-width: 768px) {
   .secondary-ctas {
     max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
-  .secondary-cta-btn {
+  .secondary-cta {
     flex: 0 1 auto;
   }
 }

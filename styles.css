@@ -35,9 +35,12 @@
   --color-light-sand: #f5f3ef;     /* Light sand/ivory for cards */
   --color-warm-beige: #f9f7f4;     /* Warm beige background */
   --color-gray: #9a9490;
+  --color-gray-light: #d1d5db;     /* Light gray for borders */
+  --color-gray-medium: #9ca3af;    /* Medium gray for focus borders and placeholders */
   --color-dark-gray: #3e3a36;
   --color-text: #2a2622;           /* Deep ink for readability */
   --color-text-light: #726b63;     /* Softer warm gray for body text */
+  --color-primary-focus: rgba(74, 107, 92, 0.1); /* Subtle green focus ring */
   
   /* Accent */
   --color-accent: #f7f5f1;         /* Soft warm cream */
@@ -1297,6 +1300,40 @@ p {
 
 .booking-form {
   max-width: 100%;
+}
+
+/* Booking form field styles - visible borders and clear focus states */
+.booking-form .form-input,
+.booking-form .form-select,
+.booking-form .form-textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: var(--font-size-base);
+  border: 1px solid var(--color-gray-light);
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  font-family: inherit;
+}
+
+.booking-form .form-input:focus,
+.booking-form .form-select:focus,
+.booking-form .form-textarea:focus {
+  outline: none;
+  border-color: var(--color-gray-medium);
+  box-shadow: 0 0 0 3px var(--color-primary-focus);
+}
+
+/* Placeholder text styling - readable but subdued */
+.booking-form .form-input::placeholder,
+.booking-form .form-textarea::placeholder {
+  color: var(--color-gray-medium);
+  opacity: 1;
+}
+
+.booking-form .form-textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 .booking-actions {

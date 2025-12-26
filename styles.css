@@ -1132,13 +1132,21 @@ p {
 
 .treatment-options {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-lg);
-  margin-bottom: var(--spacing-3xl);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto var(--spacing-3xl) auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .treatment-option {
   cursor: pointer;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .treatment-option__input {
@@ -1158,6 +1166,9 @@ p {
   align-items: center;
   justify-content: center;
   gap: var(--spacing-sm);
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .treatment-option__card:hover {
@@ -1181,11 +1192,26 @@ p {
   font-weight: 600;
   color: var(--color-text);
   font-size: var(--font-size-base);
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-align: center;
 }
 
 .treatment-option__time {
   font-size: var(--font-size-sm);
   color: var(--color-text-light);
+}
+
+/* Center the "Something Else" card when it's alone on the last row */
+.treatment-card--other {
+  justify-self: center;
+}
+
+@media (min-width: 900px) {
+  .treatment-card--other {
+    grid-column: 2 / span 2;
+  }
 }
 
 .day-options {
@@ -1332,7 +1358,7 @@ p {
 
 @media (max-width: 900px) {
   .treatment-options {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
   
   .day-options {
@@ -1350,7 +1376,7 @@ p {
   }
   
   .treatment-options {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
   
   .day-options {
@@ -1378,6 +1404,18 @@ p {
   
   .booking-actions .btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .treatment-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 360px) {
+  .treatment-options {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -1299,6 +1299,40 @@ p {
   max-width: 100%;
 }
 
+/* Booking form field styles - visible borders and clear focus states */
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: var(--font-size-base);
+  border: 1px solid #d1d5db; /* Light gray border */
+  background: #fff;
+  border-radius: 10px; /* Matches site's radius-md */
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  font-family: inherit;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: #9ca3af; /* Slightly darker gray on focus */
+  box-shadow: 0 0 0 3px rgba(74, 107, 92, 0.1); /* Subtle green focus ring matching site's primary color */
+}
+
+/* Placeholder text styling - readable but subdued */
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+.booking-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
 .booking-actions {
   display: flex;
   gap: var(--spacing-lg);

@@ -3125,7 +3125,19 @@ p {
   transform: translateY(0);
 }
 
-/* Desktop: 2 buttons on first row, 1 centered on second row */
+/* Mobile: stack vertically full-width */
+@media (max-width: 599px) {
+  .secondary-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .secondary-cta-btn {
+    width: 100%;
+  }
+}
+
+/* Tablet: 2 buttons on first row, 1 centered on second row */
 @media (min-width: 600px) {
   .secondary-ctas {
     max-width: 480px;
@@ -3144,7 +3156,7 @@ p {
   }
 }
 
-/* Larger screens: all 3 in one row if there's space */
+/* Desktop: all 3 in one row if there's space */
 @media (min-width: 768px) {
   .secondary-ctas {
     max-width: 600px;
@@ -3152,18 +3164,6 @@ p {
   
   .secondary-cta-btn {
     flex: 0 1 auto;
-  }
-}
-
-/* Mobile: stack vertically full-width */
-@media (max-width: 599px) {
-  .secondary-ctas {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .secondary-cta-btn {
-    width: 100%;
   }
 }
 

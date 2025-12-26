@@ -3075,6 +3075,99 @@ p {
 }
 
 /* ========================================
+   Secondary CTAs - Modern action buttons
+   ======================================== */
+
+.secondary-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.secondary-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding: 0 20px;
+  background: rgba(74, 107, 92, 0.08);
+  border: 1px solid rgba(74, 107, 92, 0.25);
+  border-radius: 999px;
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  letter-spacing: 0;
+  text-decoration: none;
+  transition: all var(--transition-smooth);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.secondary-cta-btn:hover {
+  background: rgba(74, 107, 92, 0.12);
+  border-color: rgba(74, 107, 92, 0.35);
+  color: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 107, 92, 0.15);
+  text-decoration: none;
+}
+
+.secondary-cta-btn:focus-visible {
+  outline: 3px solid rgba(74, 107, 92, 0.3);
+  outline-offset: 2px;
+}
+
+.secondary-cta-btn:active {
+  transform: translateY(0);
+}
+
+/* Desktop: 2 buttons on first row, 1 centered on second row */
+@media (min-width: 600px) {
+  .secondary-ctas {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .secondary-cta-btn:nth-child(1),
+  .secondary-cta-btn:nth-child(2) {
+    flex: 1 1 calc(50% - 6px);
+    min-width: 0;
+  }
+  
+  .secondary-cta-btn:nth-child(3) {
+    flex: 0 1 auto;
+  }
+}
+
+/* Larger screens: all 3 in one row if there's space */
+@media (min-width: 768px) {
+  .secondary-ctas {
+    max-width: 600px;
+  }
+  
+  .secondary-cta-btn {
+    flex: 0 1 auto;
+  }
+}
+
+/* Mobile: stack vertically full-width */
+@media (max-width: 599px) {
+  .secondary-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .secondary-cta-btn {
+    width: 100%;
+  }
+}
+
+/* ========================================
    Treatment Selection Summary
    ======================================== */
 

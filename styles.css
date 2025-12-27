@@ -92,6 +92,9 @@
   --transition-normal: 280ms ease;
   --transition-smooth: 350ms cubic-bezier(0.4, 0, 0.2, 1);
   
+  /* Sticky CTA dimensions for mobile */
+  --sticky-cta-height: 108px; /* 14px top + 14px bottom + 44px button + 12px gap + 24px phone */
+  
   /* Max Width - max-w-6xl equivalent */
   --max-width: 1152px; /* 72rem = max-w-6xl in Tailwind */
 }
@@ -479,7 +482,11 @@ p, li {
     padding: 14px 24px;
   }
 
-  /* Hide inline primary CTAs on mobile when sticky CTA is present */
+  /* 
+   * Hide inline duplicate CTAs on mobile when sticky CTA is present
+   * This prevents users from seeing "Request a consultation" multiple times.
+   * The sticky bar at the bottom provides the primary call-to-action.
+   */
   body.has-sticky-cta .cta-inline {
     display: none;
   }
@@ -3092,7 +3099,7 @@ textarea {
     transform: translateY(1rem);
     pointer-events: none;
     /* Fixed height for consistent spacing calculations */
-    min-height: 108px; /* 14px top + 14px bottom + 44px button + 12px gap + 24px phone */
+    min-height: var(--sticky-cta-height);
   }
 
   .sticky-cta.visible {
@@ -3118,7 +3125,7 @@ textarea {
 
   /* Add padding to prevent sticky CTA from covering content - only on pages with sticky CTA */
   body.has-sticky-cta {
-    padding-bottom: calc(108px + env(safe-area-inset-bottom));
+    padding-bottom: calc(var(--sticky-cta-height) + env(safe-area-inset-bottom));
   }
 
 /* ========================================

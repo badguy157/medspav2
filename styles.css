@@ -2282,6 +2282,26 @@ p {
   margin-top: var(--spacing-2xl);
 }
 
+/* Contact page CTA spacing */
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;              /* spacing between helper and buttons */
+  align-items: center;    /* keep centered */
+}
+
+.contact-helper {
+  margin: 0;              /* avoid random default spacing */
+  text-align: center;
+}
+
+.contact-cta-row {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /* --------------------------------------------------------------------------
    Treatment Categories
    -------------------------------------------------------------------------- */

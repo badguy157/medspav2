@@ -480,8 +480,7 @@ p, li {
   }
 
   /* Hide inline primary CTAs on mobile when sticky CTA is present */
-  body.has-sticky-cta .cta-inline,
-  body.has-sticky-cta .primary-cta-inline {
+  body.has-sticky-cta .cta-inline {
     display: none;
   }
 }

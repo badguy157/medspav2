@@ -3719,6 +3719,8 @@ body.booking-page .hero {
 
 /* ========================================
    Mobile Polish Pass - Booking Flow Improvements
+   NOTE: These rules extend/override earlier 768px mobile styles
+   for more comprehensive mobile optimization.
    ======================================== */
 
 /* Safety: Prevent horizontal scrolling on all pages */
@@ -3729,12 +3731,14 @@ html, body {
 /* Mobile optimization at 768px breakpoint */
 @media (max-width: 768px) {
   /* 1. Fix stepper clipping and improve mobile layout */
+  /* Override earlier .booking-wrapper padding for tighter spacing */
   .booking-wrapper {
-    padding: 1rem; /* Tighter page padding */
+    padding: 1rem; /* Tighter page padding (was 1.5rem) */
   }
   
+  /* Override earlier .booking-progress for comprehensive mobile polish */
   .booking-progress {
-    padding: 1rem 0.75rem; /* Reduce stepper padding */
+    padding: 1rem 0.75rem; /* Reduce stepper padding (was padding-bottom: 1.5rem, margin-bottom: 1.5rem) */
     margin-bottom: 1.5rem;
     overflow: visible; /* Ensure stepper is never clipped */
     gap: 0.75rem;
@@ -3806,9 +3810,10 @@ html, body {
   }
   
   /* 4. Clean up appointment summary box */
+  /* Extends earlier .appointment-summary styles with additional properties */
   .appointment-summary {
-    padding: 1rem; /* Reduced padding */
-    margin-bottom: 1rem; /* Tighter margin */
+    padding: 1rem; /* Reduced padding (same as earlier rule) */
+    margin-bottom: 1rem; /* Tighter margin (was 1.5rem) */
     border-width: 1px; /* Lighter border */
     max-width: 100%;
     margin-left: auto;

@@ -2243,6 +2243,60 @@ p {
 }
 
 /* --------------------------------------------------------------------------
+   Contact Booking Form - Visible borders and clear styling
+   -------------------------------------------------------------------------- */
+.contact-booking-form input,
+.contact-booking-form select,
+.contact-booking-form textarea {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 12px;
+  padding: 14px 14px;
+  background: #fff;
+  color: #111;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+
+.contact-booking-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-booking-form input::placeholder,
+.contact-booking-form textarea::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.contact-booking-form input:focus,
+.contact-booking-form select:focus,
+.contact-booking-form textarea:focus {
+  border-color: rgba(46, 112, 88, 0.55);   /* use the site green tone */
+  box-shadow: 0 0 0 4px rgba(46, 112, 88, 0.12);
+}
+
+.contact-booking-form select {
+  padding-right: 44px; /* room for chevron */
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(0, 0, 0, 0.55) 50%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.55) 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) 55%,
+    calc(100% - 16px) 55%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.contact-booking-form input:disabled,
+.contact-booking-form select:disabled,
+.contact-booking-form textarea:disabled {
+  background: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* --------------------------------------------------------------------------
    Contact Info
    -------------------------------------------------------------------------- */
 .contact-info {

@@ -56,10 +56,10 @@
   </div>
 
   <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav__container">
+  <nav class="nav site-header" id="siteHeader">
+    <div class="nav__container header-inner">
       <a href="index.html" class="nav__logo">Fresh Glow MedSpa</a>
-      <button class="nav__toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+      <button class="nav__toggle hamburger" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
         <span class="nav__toggle-icon"></span>
       </button>
       <ul class="nav__menu" id="nav-menu">
@@ -725,6 +725,66 @@
       // Scroll to top
       document.querySelector('.booking-wrapper').scrollIntoView({ behavior: 'smooth' });
     }
+  </script>
+
+  <!-- Sticky Header Script -->
+  <script>
+    (function() {
+      const header = document.getElementById('siteHeader');
+      if (!header) return;
+      
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+      
+      function updateHeader() {
+        const currentScrollY = window.scrollY;
+        const isSticky = currentScrollY > 120;
+        
+        // Only apply sticky behavior on mobile (viewport width <= 768px)
+        if (window.innerWidth <= 768) {
+          // Toggle sticky class
+          header.classList.toggle('is-sticky', isSticky);
+          
+          // Add body padding to compensate for sticky header
+          if (isSticky) {
+            document.body.style.paddingTop = header.offsetHeight + 'px';
+            
+            // Hide on scroll down, show on scroll up
+            if (currentScrollY > lastScrollY && currentScrollY > 200) {
+              header.classList.add('is-hidden');
+            } else {
+              header.classList.remove('is-hidden');
+            }
+          } else {
+            document.body.style.paddingTop = '';
+            header.classList.remove('is-hidden');
+          }
+        } else {
+          // On desktop, remove all sticky classes
+          header.classList.remove('is-sticky', 'is-hidden');
+          document.body.style.paddingTop = '';
+        }
+        
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+      
+      function requestTick() {
+        if (!ticking) {
+          requestAnimationFrame(updateHeader);
+          ticking = true;
+        }
+      }
+      
+      // Listen to scroll events
+      window.addEventListener('scroll', requestTick, { passive: true });
+      
+      // Listen to resize events to handle orientation changes
+      window.addEventListener('resize', requestTick, { passive: true });
+      
+      // Initialize on page load
+      updateHeader();
+    })();
   </script>
 </body>
 </html>

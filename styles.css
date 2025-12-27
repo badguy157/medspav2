@@ -290,6 +290,44 @@ p, li {
   border-bottom: 1px solid rgba(42, 38, 34, 0.05);
 }
 
+/* Sticky header base styles */
+.site-header {
+  position: relative;
+  z-index: 10;
+  transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+  will-change: transform;
+}
+
+/* Sticky header when scrolled (mobile only via JS) */
+.site-header.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Hidden state when scrolling down */
+.site-header.is-hidden {
+  transform: translateY(-110%);
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .site-header {
+    transition: none;
+  }
+}
+
+/* Prevent anchor jumps being hidden behind sticky bar */
+html {
+  scroll-padding-top: 80px;
+}
+
 .nav__container {
   display: flex;
   justify-content: space-between;
@@ -374,6 +412,22 @@ p, li {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
+  /* Compact sticky header on mobile */
+  .site-header.is-sticky {
+    padding: 10px 14px;
+  }
+  
+  .site-header.is-sticky .header-inner {
+    min-height: 56px;
+  }
+  
+  /* Ensure hamburger is an easy tap target */
+  .site-header .hamburger,
+  .site-header button[aria-label*="menu"] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
   .nav__toggle {
     display: block;
   }

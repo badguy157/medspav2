@@ -3178,32 +3178,35 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 16px;
+  justify-content: center;
+  margin-top: 12px;
 }
 
 .secondary-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 16px;
-  border: 2px solid rgba(66, 98, 85, 0.8);
+  padding: 10px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
   line-height: 1;
-  background: transparent;
-  color: #2f3b35;
-  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+  background: #fff;
+  color: inherit;
+  transition: background-color 120ms ease, border-color 120ms ease;
 }
 
 .secondary-cta:hover {
-  background: rgba(66, 98, 85, 0.08);
-  transform: translateY(-1px);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.4);
 }
 
 .secondary-cta:focus-visible {
-  outline: 3px solid rgba(66, 98, 85, 0.25);
-  outline-offset: 3px;
+  outline: 2px solid rgba(0, 0, 0, 0.5);
+  outline-offset: 2px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.4);
 }
 
 /* Mobile: stack vertically full-width */

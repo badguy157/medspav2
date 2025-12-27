@@ -3723,8 +3723,8 @@ body.booking-page .hero {
    for more comprehensive mobile optimization.
    ======================================== */
 
-/* Safety: Prevent horizontal scrolling on all pages */
-html, body {
+/* Safety: Prevent horizontal scrolling on booking pages */
+body.booking-page {
   overflow-x: hidden;
 }
 
@@ -3812,33 +3812,38 @@ html, body {
   /* 4. Clean up appointment summary box */
   /* Extends earlier .appointment-summary styles with additional properties */
   .appointment-summary {
-    padding: 1rem; /* Reduced padding (same as earlier rule) */
+    /* padding: 1rem already set in earlier rule at line 3582 */
     margin-bottom: 1rem; /* Tighter margin (was 1.5rem) */
     border-width: 1px; /* Lighter border */
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 100%; /* New: ensure it doesn't exceed container */
+    margin-left: auto; /* New: center it */
+    margin-right: auto; /* New: center it */
   }
   
   .appointment-summary__item {
-    gap: 0.5rem;
-    align-items: flex-start;
+    /* flex-direction: column already set in earlier rule at line 3586 */
+    /* align-items: flex-start already set in earlier rule at line 3587 */
+    gap: 0.5rem; /* Larger gap for breathing room (was 0.25rem) */
   }
   
   .appointment-summary__label {
-    font-size: 0.8125rem;
-    min-width: auto;
+    /* min-width: auto already set in earlier rule at line 3593 */
+    font-size: 0.8125rem; /* Slightly larger than earlier 0.75rem for readability */
   }
   
   .appointment-summary__value {
-    font-size: 0.9375rem;
-    word-wrap: break-word; /* Allow wrapping for long text */
-    overflow-wrap: break-word;
+    /* font-size: 0.9375rem already set in earlier rule at line 3598 */
+    word-wrap: break-word; /* New: Allow wrapping for long text */
+    overflow-wrap: break-word; /* New: Force wrapping on long words */
   }
   
   .appointment-summary__edit {
-    margin-left: auto; /* Right-align edit links */
-    font-size: 0.8125rem;
+    /* Earlier rule at line 3601-3603 uses align-self: flex-end + margin-top: -0.5rem */
+    /* We keep both approaches as they serve different purposes: */
+    /* align-self: flex-end (from earlier) - aligns within flex column */
+    /* margin-left: auto (new) - ensures it's right-aligned in the available space */
+    margin-left: auto; /* Right-align edit links within their container */
+    font-size: 0.8125rem; /* New: slightly larger than label for prominence */
   }
   
   /* Reassurance block - tighter spacing */

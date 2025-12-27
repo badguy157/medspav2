@@ -3080,53 +3080,38 @@ p {
 
 .secondary-ctas {
   display: flex;
-  gap: 12px;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 18px 0 22px;
+  gap: 12px;
+  margin-top: 16px;
 }
 
 .secondary-cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 44px;
-  padding: 0 18px;
+  padding: 10px 16px;
+  border: 2px solid rgba(66, 98, 85, 0.8);
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
-  background: rgba(47, 92, 76, 0.08);
-  border: 1px solid rgba(47, 92, 76, 0.25);
-  color: #2f5c4c;
-  transition: all var(--transition-smooth);
-  cursor: pointer;
-  white-space: nowrap;
+  line-height: 1;
+  background: transparent;
+  color: #2f3b35;
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
 }
 
 .secondary-cta:hover {
-  background: rgba(47, 92, 76, 0.12);
-  border-color: rgba(47, 92, 76, 0.35);
-  color: #2f5c4c;
+  background: rgba(66, 98, 85, 0.08);
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
-  text-decoration: none;
 }
 
 .secondary-cta:focus-visible {
-  outline: 3px solid rgba(47, 92, 76, 0.35);
-  outline-offset: 2px;
-}
-
-.secondary-cta:active {
-  transform: translateY(0);
+  outline: 3px solid rgba(66, 98, 85, 0.25);
+  outline-offset: 3px;
 }
 
 /* Mobile: stack vertically full-width */
 @media (max-width: 520px) {
-  .secondary-ctas {
-    justify-content: stretch;
-  }
-  
   .secondary-cta {
     width: 100%;
   }

@@ -2291,6 +2291,16 @@ p, li {
   .package-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
+    padding: 0 var(--spacing-md); /* Add side padding so cards don't touch edges */
+  }
+  
+  .package-card {
+    padding: var(--spacing-lg); /* Reduce padding on mobile for less boxy feel */
+    border: 1px solid rgba(42, 38, 34, 0.08); /* Lighter, thinner border */
+  }
+  
+  .package-card--featured {
+    border: 1.5px solid var(--color-primary); /* Maintain featured border but thinner */
   }
 }
 
@@ -3121,6 +3131,27 @@ textarea {
   .sticky-cta__phone:hover {
     color: var(--color-primary);
     text-decoration: underline;
+  }
+
+  /* Hide the large in-content CTA section on mobile to avoid duplication with sticky CTA */
+  .membership-cta {
+    display: none; /* This hides "Ready to become a member?" section on mobile */
+  }
+  
+  /* Style plan-specific CTAs as secondary/outlined on mobile */
+  .package-card .btn--primary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+  
+  .package-card .btn--primary:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+  }
+  
+  .package-card .btn--secondary {
+    border-width: 1.5px; /* Slightly thinner border for secondary buttons */
   }
 
   /* Add padding to prevent sticky CTA from covering content - only on pages with sticky CTA */

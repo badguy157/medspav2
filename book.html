@@ -6,6 +6,48 @@
   <meta name="description" content="Request a consultation at Fresh Glow MedSpa. Choose your treatment, pick a preferred time, and we'll confirm within 24 hours.">
   <title>Request Consultation - Fresh Glow MedSpa</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Confirmation Links Styling */
+    .confirmation .kt-confirm-links,
+    .kt-confirm-links {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 12px !important;
+      justify-content: center !important;
+      margin-top: 14px !important;
+    }
+
+    .confirmation .kt-confirm-links .kt-confirm-link,
+    .kt-confirm-links .kt-confirm-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 10px 14px !important;
+      border: 1px solid rgba(0,0,0,0.25) !important;
+      border-radius: 999px !important;
+      background: #fff !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+      line-height: 1 !important;
+      white-space: nowrap !important;
+      color: inherit !important;
+    }
+
+    .kt-confirm-links .kt-confirm-link:hover {
+      background: rgba(0,0,0,0.03) !important;
+      border-color: rgba(0,0,0,0.4) !important;
+    }
+
+    .kt-confirm-links .kt-confirm-link:focus-visible {
+      outline: 3px solid rgba(0,0,0,0.18) !important;
+      outline-offset: 3px !important;
+    }
+
+    @media (max-width: 480px) {
+      .kt-confirm-links { gap: 10px !important; }
+      .kt-confirm-links .kt-confirm-link { width: 100% !important; }
+    }
+  </style>
 </head>
 <body class="booking-page">
   <!-- Demo Banner -->
@@ -436,10 +478,10 @@
               </div>
             </div>
             
-            <div class="secondary-ctas">
-              <a href="#" class="secondary-cta" onclick="event.preventDefault(); alert('This would open a checklist of items to bring to your consultation.');">What to bring</a>
-              <a href="#" class="secondary-cta" onclick="event.preventDefault(); alert('This would show directions and parking information.');">Directions & Parking</a>
-              <a href="#" class="secondary-cta" onclick="event.preventDefault(); alert('This would download an .ics calendar file.');">Add to calendar</a>
+            <div class="kt-confirm-links">
+              <a href="#" class="kt-confirm-link" onclick="event.preventDefault(); alert('This would open a checklist of items to bring to your consultation.');">What to bring</a>
+              <a href="#" class="kt-confirm-link" onclick="event.preventDefault(); alert('This would show directions and parking information.');">Directions & Parking</a>
+              <a href="#" class="kt-confirm-link" onclick="event.preventDefault(); alert('This would download an .ics calendar file.');">Add to calendar</a>
             </div>
             
             <div class="booking-actions" style="margin-top: 2rem;">

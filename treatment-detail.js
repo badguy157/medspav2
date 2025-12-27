@@ -197,7 +197,7 @@
       <h2>${escapeHtml(ctaHeadline)}</h2>
       <p class="section__subtitle">${escapeHtml(ctaSubtext)}</p>
       <div class="mt-xl">
-        <a href="${escapeHtml(bookingUrl)}" class="btn btn--primary btn--large">Request a consultation</a>
+        <a href="${escapeHtml(bookingUrl)}" class="btn btn--primary btn--large cta-inline">Request a consultation</a>
       </div>
     `;
   }

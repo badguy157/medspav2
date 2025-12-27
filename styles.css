@@ -960,6 +960,7 @@ html {
   overflow: hidden;
   background: linear-gradient(135deg, var(--color-primary-muted) 0%, var(--color-sage-light) 100%);
   border: 3px solid var(--color-primary-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .injector-card__placeholder {
@@ -969,6 +970,22 @@ html {
   align-items: center;
   justify-content: center;
   font-size: 80px;
+}
+
+/* Provider avatar - optimized circular image */
+.provider-avatar {
+  width: clamp(96px, 22vw, 200px);
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  overflow: hidden;
+  display: block;
+}
+
+.provider-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .injector-card__content {

@@ -492,11 +492,19 @@
         <p class="section__subtitle">Experienced, licensed professionals you can trust.</p>
       </div>
       <div class="injector-card">
-        <div class="injector-card__image">
-          <div class="injector-card__placeholder">
-            👨‍⚕️
-          </div>
-        </div>
+        <picture class="injector-card__image provider-avatar">
+          <source type="image/webp"
+            srcset="/images/medspa/main_injector-600.webp 600w, /images/medspa/main_injector-1000.webp 1000w"
+            sizes="(max-width: 600px) 120px, 200px" />
+          <img
+            src="/images/medspa/main_injector-1000.jpg"
+            alt="Lead aesthetic injector"
+            width="200"
+            height="200"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
         <div class="injector-card__content">
           <h3 class="injector-card__name">Sarah Johnson, RN (Sample)</h3>
           <p class="injector-card__role">Lead Aesthetic Injector</p>

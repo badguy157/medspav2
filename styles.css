@@ -109,6 +109,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -118,9 +120,11 @@ body {
   color: var(--color-text);
   background-color: var(--color-off-white); /* Very light warm neutral base */
   letter-spacing: -0.01em;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-img {
+img, video, svg {
   max-width: 100%;
   height: auto;
   display: block;
@@ -141,6 +145,15 @@ ul, ol {
   list-style-position: inside;
 }
 
+/* Tap target accessibility */
+a, button, input, select, textarea {
+  font: inherit;
+}
+
+button, .btn, a.btn {
+  min-height: 44px;
+}
+
 /* --------------------------------------------------------------------------
    Typography - Refined hierarchy with more breathing room
    -------------------------------------------------------------------------- */
@@ -153,19 +166,22 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: var(--font-family-serif);
-  font-size: var(--font-size-5xl);
+  font-size: clamp(32px, 6vw, 56px);
+  line-height: 1.08;
   font-weight: 500;
   margin-bottom: var(--spacing-xl);
 }
 
 h2 {
-  font-size: var(--font-size-3xl);
+  font-size: clamp(24px, 4.5vw, 40px);
+  line-height: 1.15;
   margin-bottom: var(--spacing-lg);
   letter-spacing: -0.01em; /* Subtle letter spacing for premium feel */
 }
 
 h3 {
-  font-size: var(--font-size-xl);
+  font-size: clamp(18px, 3.6vw, 24px);
+  line-height: 1.2;
   margin-bottom: var(--spacing-md);
 }
 
@@ -174,9 +190,16 @@ h4 {
   margin-bottom: var(--spacing-sm);
 }
 
-p {
+p, li {
   margin-bottom: var(--spacing-md);
-  line-height: var(--line-height-relaxed);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+@media (max-width: 420px) {
+  p, li {
+    font-size: 15px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -184,18 +207,24 @@ p {
    -------------------------------------------------------------------------- */
 .container {
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 0 var(--spacing-xl);
+  padding: 0 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .section {
-  padding: var(--spacing-section) 0; /* py-20 on desktop */
+  padding: 72px 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .section {
-    padding: var(--spacing-section-mobile) 0; /* py-16 on smaller screens */
+    padding: 44px 0;
   }
 }
 
@@ -216,12 +245,22 @@ p {
   margin-bottom: var(--spacing-3xl);
 }
 
-.section__subtitle {
+.section__title, .section-title {
+  margin-bottom: 10px;
+}
+
+.section__subtitle, .section-subtitle {
   color: var(--color-text-light);
   font-size: var(--font-size-lg);
   max-width: 580px;
-  margin: 0 auto;
+  margin: 0 auto 22px;
   line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 768px) {
+  .section__subtitle, .section-subtitle {
+    margin-bottom: 16px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -350,7 +389,9 @@ p {
    Buttons - Premium pill-shaped styling
    -------------------------------------------------------------------------- */
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: var(--spacing-md) var(--spacing-2xl);
   font-size: var(--font-size-base);
   font-weight: 500;
@@ -361,6 +402,7 @@ p {
   transition: all var(--transition-smooth);
   text-decoration: none;
   letter-spacing: 0.01em;
+  min-height: 44px;
 }
 
 .btn--primary {
@@ -401,10 +443,27 @@ p {
   width: 100%;
 }
 
-.btn-group {
+.btn-group, .btn-row {
   display: flex;
   gap: var(--spacing-lg);
   flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .btn-group, .btn-row {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .btn-group .btn,
+  .btn-row .btn,
+  .btn--primary,
+  .btn--secondary {
+    width: 100%;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Text link button style */
@@ -1458,7 +1517,7 @@ p {
 
 @media (max-width: 900px) {
   .hero {
-    padding: var(--spacing-section-mobile) 0;
+    padding: 3rem 0; /* Reduced from spacing-section-mobile */
   }
   
   .hero__layout {
@@ -1485,17 +1544,53 @@ p {
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    padding: 2.75rem 0 2rem 0; /* Tighter on mobile */
+  }
+  
+  .hero__title {
+    margin-bottom: 1rem;
+  }
+  
+  .hero__subtitle {
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero__trust-row {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
 /* --------------------------------------------------------------------------
    Cards - Premium styling with rounded corners and subtle shadows
    -------------------------------------------------------------------------- */
-.card-grid {
+.card-grid, .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-2xl);
 }
 
-.card-grid--3-col {
-  grid-template-columns: repeat(3, 1fr);
+.card-grid--3-col, .grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+@media (max-width: 768px) {
+  .card-grid, .grid-2,
+  .card-grid--3-col, .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
 }
 
 .card {
@@ -1677,15 +1772,17 @@ p {
 }
 
 @media (max-width: 900px) {
-  .card-grid--3-col {
+  .card-grid--3-col, .grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
-  .card-grid,
-  .card-grid--3-col {
+@media (max-width: 768px) {
+  .card-grid, .grid-2,
+  .card-grid--3-col, .grid-3,
+  .grid-4 {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
   
   .card {
@@ -1865,6 +1962,12 @@ p {
   border: 1px solid rgba(42, 38, 34, 0.04);
 }
 
+@media (max-width: 768px) {
+  .faq-list {
+    padding: var(--spacing-lg);
+  }
+}
+
 .faq-item {
   padding: var(--spacing-2xl) 0;
   border-bottom: 1px solid rgba(42, 38, 34, 0.06);
@@ -1913,6 +2016,13 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
 }
 
 .result-card {
@@ -2102,6 +2212,23 @@ p {
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  .pricing-row {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+  }
+  
+  .pricing-row__service {
+    font-size: 15px;
+  }
+  
+  .pricing-row__price {
+    font-size: 18px;
+  }
+}
+
 .pricing-note {
   text-align: center;
   color: var(--color-text-light);
@@ -2119,6 +2246,13 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+  .package-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
 }
 
 .package-card {
@@ -2220,24 +2354,43 @@ p {
 
 .form-input,
 .form-select,
-.form-textarea {
+.form-textarea,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
   width: 100%;
-  padding: var(--spacing-md);
+  padding: 12px 14px;
   font-size: var(--font-size-base);
-  border: 2px solid var(--color-light-gray);
-  border-radius: var(--radius-md);
-  transition: border-color var(--transition-fast);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: #fff;
+  border-radius: 12px;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   font-family: inherit;
 }
 
 .form-input:focus,
 .form-select:focus,
-.form-textarea:focus {
+.form-textarea:focus,
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
   border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(74, 107, 92, 0.1);
 }
 
-.form-textarea {
+.form-input::placeholder,
+.form-textarea::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.form-textarea,
+textarea {
   resize: vertical;
   min-height: 120px;
 }

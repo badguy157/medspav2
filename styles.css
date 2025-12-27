@@ -2812,7 +2812,7 @@ p {
 
 /* Mobile visibility utilities */
 .hide-on-mobile {
-  display: inherit;
+  display: block;
 }
 
 @media (max-width: 480px) {
@@ -3415,7 +3415,9 @@ p {
   }
   
   .booking-progress::before {
-    /* Adjust connector line to account for smaller step circles and tighter spacing */
+    /* Adjust connector line positioning for smaller mobile stepper
+       Desktop uses 20% with 48px circles; mobile reduces circles to 36px,
+       so we tighten to 15% to maintain visual balance */
     left: 15%;
     right: 15%;
   }
@@ -3504,7 +3506,7 @@ p {
     white-space: normal;
     height: auto;
     min-height: 54px;
-    padding: 12px var(--spacing-md);
+    padding: calc(var(--spacing-sm) + var(--spacing-xs)) var(--spacing-md);
   }
   
   .booking-step__label {

@@ -2815,7 +2815,7 @@ p {
   display: inherit;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .hide-on-mobile {
     display: none !important;
   }
@@ -3348,18 +3348,6 @@ p {
     white-space: nowrap;
   }
   
-  /* Prevent text wrapping in CTAs unless extremely narrow */
-  @media (max-width: 340px) {
-    .hero .btn--large,
-    .hero .btn {
-      font-size: 15px;
-      white-space: normal;
-      height: auto;
-      min-height: 54px;
-      padding: 12px var(--spacing-md);
-    }
-  }
-  
   /* ========================================
      GOAL 2: Remove Duplicate CTA Appearance
      ======================================== */
@@ -3427,6 +3415,7 @@ p {
   }
   
   .booking-progress::before {
+    /* Adjust connector line to account for smaller step circles and tighter spacing */
     left: 15%;
     right: 15%;
   }
@@ -3450,13 +3439,6 @@ p {
     text-align: center;
     word-wrap: break-word;
     max-width: 100%;
-  }
-  
-  /* Stack stepper on very small screens */
-  @media (max-width: 360px) {
-    .booking-step__label {
-      font-size: 0.6rem;
-    }
   }
   
   /* ========================================
@@ -3511,6 +3493,22 @@ p {
   
   .booking-content__title {
     font-size: 1.25rem;
+  }
+}
+
+/* Extremely narrow screens - allow CTA text wrapping */
+@media (max-width: 340px) {
+  .hero .btn--large,
+  .hero .btn {
+    font-size: 15px;
+    white-space: normal;
+    height: auto;
+    min-height: 54px;
+    padding: 12px var(--spacing-md);
+  }
+  
+  .booking-step__label {
+    font-size: 0.6rem;
   }
 }
 

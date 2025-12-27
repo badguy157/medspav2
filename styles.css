@@ -3716,3 +3716,206 @@ body.booking-page .hero {
     padding: 0.3rem 0.5rem;
   }
 }
+
+/* ========================================
+   Mobile Polish Pass - Booking Flow Improvements
+   NOTE: These rules extend/override earlier 768px mobile styles
+   for more comprehensive mobile optimization.
+   ======================================== */
+
+/* Safety: Prevent horizontal scrolling on booking pages */
+body.booking-page {
+  overflow-x: hidden;
+}
+
+/* Mobile optimization at 768px breakpoint */
+@media (max-width: 768px) {
+  /* 1. Fix stepper clipping and improve mobile layout */
+  /* Override earlier .booking-wrapper padding for tighter spacing */
+  .booking-wrapper {
+    padding: 1rem; /* Tighter page padding (was 1.5rem) */
+  }
+  
+  /* Override earlier .booking-progress for comprehensive mobile polish */
+  .booking-progress {
+    padding: 1rem 0.75rem; /* Reduce stepper padding (was padding-bottom: 1.5rem, margin-bottom: 1.5rem) */
+    margin-bottom: 1.5rem;
+    overflow: visible; /* Ensure stepper is never clipped */
+    gap: 0.75rem;
+  }
+  
+  /* Add top padding to main content to prevent overlap */
+  .booking-content {
+    padding: 1.25rem 1.125rem; /* Tighter card padding: ~18-22px */
+    margin-top: 0.5rem;
+  }
+  
+  /* 2. Reduce excessive vertical spacing */
+  .booking-content__title {
+    margin-bottom: 0.5rem; /* Tighter spacing */
+  }
+  
+  .booking-content__subtitle {
+    margin-bottom: 1rem; /* Reduced from 3xl */
+  }
+  
+  /* Tighten section gaps */
+  .treatment-options,
+  .datetime-picker {
+    margin-bottom: 1rem; /* 16px instead of 48px */
+  }
+  
+  .form-group {
+    margin-bottom: 1rem; /* 16px gap between form fields */
+  }
+  
+  /* 3. Make day/time selection tiles mobile-friendly with 2-column grid */
+  .day-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns */
+    gap: 0.75rem; /* 12px gap */
+  }
+  
+  .day-option__card {
+    padding: 0.75rem 0.5rem; /* Reduced padding */
+    font-size: 0.9375rem; /* Slightly smaller */
+  }
+  
+  .time-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns */
+    gap: 0.75rem; /* 12px gap */
+  }
+  
+  .time-option__card {
+    padding: 1rem 0.75rem; /* Reduced padding */
+  }
+  
+  .time-option__label {
+    font-size: 1rem; /* Slightly smaller */
+  }
+  
+  .time-option__range {
+    font-size: 0.8125rem;
+  }
+  
+  /* Treatment cards - tighter spacing */
+  .treatment-option__card {
+    padding: 1rem 0.75rem; /* Reduced from 2rem */
+  }
+  
+  .treatment-option__icon {
+    font-size: 1.875rem; /* Slightly smaller */
+    margin-bottom: 0.5rem;
+  }
+  
+  /* 4. Clean up appointment summary box */
+  /* Extends earlier .appointment-summary styles with additional properties */
+  .appointment-summary {
+    /* padding: 1rem already set in earlier rule at line 3582 */
+    margin-bottom: 1rem; /* Tighter margin (was 1.5rem) */
+    border-width: 1px; /* Lighter border */
+    max-width: 100%; /* New: ensure it doesn't exceed container */
+    margin-left: auto; /* New: center it */
+    margin-right: auto; /* New: center it */
+  }
+  
+  .appointment-summary__item {
+    /* flex-direction: column already set in earlier rule at line 3586 */
+    /* align-items: flex-start already set in earlier rule at line 3587 */
+    gap: 0.5rem; /* Larger gap for breathing room (was 0.25rem) */
+  }
+  
+  .appointment-summary__label {
+    /* min-width: auto already set in earlier rule at line 3593 */
+    font-size: 0.8125rem; /* Slightly larger than earlier 0.75rem for readability */
+  }
+  
+  .appointment-summary__value {
+    /* font-size: 0.9375rem already set in earlier rule at line 3598 */
+    word-wrap: break-word; /* New: Allow wrapping for long text */
+    overflow-wrap: break-word; /* New: Force wrapping on long words */
+  }
+  
+  .appointment-summary__edit {
+    /* Earlier rule at line 3601-3603 uses align-self: flex-end + margin-top: -0.5rem */
+    /* We keep both approaches as they serve different purposes: */
+    /* align-self: flex-end (from earlier) - aligns within flex column */
+    /* margin-left: auto (new) - ensures it's right-aligned in the available space */
+    margin-left: auto; /* Right-align edit links within their container */
+    font-size: 0.8125rem; /* New: slightly larger than label for prominence */
+  }
+  
+  /* Reassurance block - tighter spacing */
+  .reassurance-block {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .reassurance-block__content {
+    gap: 0.75rem; /* 12px gap */
+  }
+  
+  /* 5. Improve button styling on mobile */
+  .booking-actions {
+    gap: 0.875rem; /* 14px gap between buttons */
+    margin-top: 1rem;
+  }
+  
+  .booking-actions .btn {
+    width: 100%; /* Full width */
+    max-width: 420px; /* Constrain max width */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.9375rem 1.25rem; /* 15px vertical, 20px horizontal */
+    font-size: 1rem; /* 16px */
+  }
+  
+  .btn--large {
+    padding: 1rem 1.375rem; /* 16px vertical, 22px horizontal */
+    font-size: 1.0625rem; /* 17px */
+  }
+}
+
+/* Extra mobile optimization at 420px breakpoint */
+@media (max-width: 420px) {
+  /* Hide step labels on very small screens, show only circles */
+  .booking-step__label {
+    display: none;
+  }
+  
+  .booking-progress {
+    padding: 0.75rem 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .booking-step__number {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  /* Even tighter spacing on small screens */
+  .booking-wrapper {
+    padding: 0.75rem; /* 12px page padding */
+  }
+  
+  .booking-content {
+    padding: 1rem; /* 16px card padding */
+  }
+  
+  .treatment-options {
+    gap: 0.625rem; /* 10px gap */
+  }
+  
+  .day-options,
+  .time-options {
+    gap: 0.625rem; /* 10px gap */
+  }
+  
+  /* Button adjustments for small screens */
+  .booking-actions .btn {
+    padding: 0.875rem 1.125rem; /* 14px vertical, 18px horizontal */
+    font-size: 1rem; /* 16px */
+  }
+}

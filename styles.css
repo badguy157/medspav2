@@ -3075,6 +3075,96 @@ p {
 }
 
 /* ========================================
+   Secondary CTAs - Modern action buttons
+   ======================================== */
+
+.secondary-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 18px 0 22px;
+}
+
+.secondary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  background: rgba(47, 92, 76, 0.08);
+  border: 1px solid rgba(47, 92, 76, 0.25);
+  color: #2f5c4c;
+  transition: all var(--transition-smooth);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.secondary-cta:hover {
+  background: rgba(47, 92, 76, 0.12);
+  border-color: rgba(47, 92, 76, 0.35);
+  color: #2f5c4c;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.10);
+  text-decoration: none;
+}
+
+.secondary-cta:focus-visible {
+  outline: 3px solid rgba(47, 92, 76, 0.35);
+  outline-offset: 2px;
+}
+
+.secondary-cta:active {
+  transform: translateY(0);
+}
+
+/* Mobile: stack vertically full-width */
+@media (max-width: 520px) {
+  .secondary-ctas {
+    justify-content: stretch;
+  }
+  
+  .secondary-cta {
+    width: 100%;
+  }
+}
+
+/* Tablet: 2 buttons on first row, 1 centered on second row */
+@media (min-width: 521px) and (max-width: 767px) {
+  .secondary-ctas {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .secondary-cta:nth-child(1),
+  .secondary-cta:nth-child(2) {
+    flex: 1 1 calc(50% - 6px);
+    min-width: 0;
+  }
+  
+  .secondary-cta:nth-child(3) {
+    flex: 0 1 auto;
+  }
+}
+
+/* Desktop: all 3 in one row if there's space */
+@media (min-width: 768px) {
+  .secondary-ctas {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .secondary-cta {
+    flex: 0 1 auto;
+  }
+}
+
+/* ========================================
    Treatment Selection Summary
    ======================================== */
 
